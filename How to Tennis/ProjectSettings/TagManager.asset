@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - AI Half box
+  - Player Half box
+  - ball
+  - ad button
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Characters
+  - Ball
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Court
+    uniqueID: 1335800749
+    locked: 0
+  - name: Grass
+    uniqueID: 1228462679
+    locked: 0
+  - name: Ball
+    uniqueID: 4259783765
+    locked: 0
+  - name: 'DEBUG SPRITE '
+    uniqueID: 3745081295
+    locked: 0
+  - name: Main Menu - Overlay
+    uniqueID: 2328304653
+    locked: 0
+  - name: Main Menu - Everything Else
+    uniqueID: 1360024555
+    locked: 0
