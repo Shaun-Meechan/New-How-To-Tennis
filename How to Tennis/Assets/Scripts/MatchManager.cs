@@ -32,11 +32,9 @@ public class MatchManager : MonoBehaviour
 	public Canvas scoreCanvas;
 	private void Start()
 	{
-		ball.Start();
 		updateScoreText();
 		StartCoroutine(hideScoreCanvas());
 		ChangeState(matchState.PlayerServe);
-		resetMatch();
 	}
 
 	public void resetMatch()
@@ -44,7 +42,7 @@ public class MatchManager : MonoBehaviour
 		//Reset the player and AI position
 		player.transform.position = new Vector3(0, 0, -23);
 		AI.transform.position = new Vector3(0, 0, 23);
-
+		AI.resetVelocity();
 		//Stop the ball from moving
 		ball.resetVelocity();
 
@@ -52,12 +50,12 @@ public class MatchManager : MonoBehaviour
 		if (MatchState == matchState.AIServe)
 		{
 			//AI is meant to serve. Move the ball to in front of the AI
-			ball.setTransform(new Vector3(0, 0, 20));
+			ball.setTransform(new Vector3(0, 1, 20));
 		}
 		else if (MatchState == matchState.PlayerServe)
 		{
 			//Player is meant to serve. Move the ball to in front of the Player
-			ball.setTransform(new Vector3(0, 0, -20));
+			ball.setTransform(new Vector3(0, 1, -30));
 		}
 	}
 
@@ -84,7 +82,6 @@ public class MatchManager : MonoBehaviour
 
 	public void ChangeState(matchState newState)
 	{
-		Debug.Log("Changing game state.");
 		MatchState = newState;
 
 		switch (MatchState)
@@ -104,6 +101,7 @@ public class MatchManager : MonoBehaviour
 				playerServeCamera.SetActive(false);
 				playerHUDCanvas.enabled = false;
 				joyStickObject.SetActive(true);
+				AI.serveBall();
 				break;
 			case matchState.PlayerHit:
 				ball.setServed(true);
@@ -179,7 +177,6 @@ public class MatchManager : MonoBehaviour
 	//Hide the canvas after a set amount of time has passed.
 	IEnumerator hideScoreCanvas()
 	{
-		Debug.Log("Hiding score canvas in 3 seconds");
 		yield return new WaitForSeconds(3);
 		scoreCanvas.enabled = false;
 	}

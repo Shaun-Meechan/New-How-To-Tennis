@@ -8,7 +8,6 @@ public class HoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     public NewBallController ball;
     public GameObject player;
-    public MiddlePoint middlePoint;
     public MatchManager matchManager;
 
     private bool pointerDown;
@@ -43,11 +42,8 @@ public class HoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             randomX = Random.Range(0, player.transform.position.x + 5);
         }
 
-        int randomZ = Random.Range(7, 20);
-        middlePoint.setTarget(new Vector3(randomX, 0, randomZ));
-        ball.setEndPoint(new Vector3(randomX, 0, randomZ));
-        middlePoint.moveToMiddle(player.transform.position, new Vector3(randomX, 0, randomZ));
-        ball.Move(player.transform.position, middlePoint.getPosition(), 1.1f);
+        int randomZ = Random.Range(8, 32);
+        ball.Move(player.transform.position, new Vector3(randomX,0,randomZ));
         matchManager.ChangeState(MatchManager.matchState.PlayerHit);
 
         Reset();

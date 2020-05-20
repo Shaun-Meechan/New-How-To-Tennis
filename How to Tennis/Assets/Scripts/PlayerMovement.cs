@@ -6,7 +6,6 @@ public class PlayerMovement : MonoBehaviour
 {
     public Joystick joystick;
     public NewBallController ball;
-    public MiddlePoint middlePoint;
     public MatchManager matchManager;
 
     float horizontalMove = 0.0f;
@@ -20,37 +19,45 @@ public class PlayerMovement : MonoBehaviour
         transform.position = new Vector3(transform.position.x + horizontalMove, transform.position.y, transform.position.z + verticalMove);
     }
 
+    public void serveBall()
+    {
+        ball.resetVelocity();
+
+        float randomX = Random.Range(-7 + transform.position.x, transform.position.x + 7);
+
+        while (randomX >= 20)
+        {
+            Debug.Log("Waffle was out of court right. Moved");
+            randomX = Random.Range(-5 + transform.position.x, 0);
+
+        }
+        while (randomX <= -20)
+        {
+            Debug.Log("Waffle was out of court left. Moved");
+            randomX = Random.Range(0, transform.position.x + 5);
+        }
+
+        int randomZ = Random.Range(7, 20);
+        ball.resetVelocity();
+        ball.Move(transform.position, new Vector3(randomX, 0, randomZ));
+        matchManager.ChangeState(MatchManager.matchState.PlayerHit);
+
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "ball")
+        if (other.gameObject.name == "BallTarget")
         {
-            if (ball.getServed() == true)
-            {
-                //Hit the ball again
-                ball.resetVelocity();
-
-                float randomX = Random.Range(-7 + transform.position.x, transform.position.x + 7);
-
-                while (randomX >= 20)
-                {
-                    Debug.Log("Waffle was out of court right. Moved");
-                    randomX = Random.Range(-5 + transform.position.x, 0);
-
-                }
-                while (randomX <= -20)
-                {
-                    Debug.Log("Waffle was out of court left. Moved");
-                    randomX = Random.Range(0, transform.position.x + 5);
-                }
-
-                int randomZ = Random.Range(7, 20);
-                middlePoint.setTarget(new Vector3(randomX, 0, randomZ));
-                ball.setEndPoint(new Vector3(randomX, 0, randomZ));
-                middlePoint.moveToMiddle(transform.position, new Vector3(randomX, 0, randomZ));
-                ball.Move(transform.position, middlePoint.getPosition(), 1.1f);
-                matchManager.ChangeState(MatchManager.matchState.PlayerHit);
-
-            }
+            Debug.LogError("Player collided with ball target");
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.name == "BallTarget")
+        {
+            Debug.LogError("Player collided with ball target");
+        }
+
     }
 }
