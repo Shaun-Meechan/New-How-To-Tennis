@@ -43,7 +43,7 @@ public class HoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         }
 
         int randomZ = Random.Range(8, 32);
-        ball.Move(player.transform.position, new Vector3(randomX,0,randomZ));
+        ball.Move(player.transform.position, new Vector3(randomX,0.1f,randomZ));
         matchManager.ChangeState(MatchManager.matchState.PlayerHit);
 
         Reset();

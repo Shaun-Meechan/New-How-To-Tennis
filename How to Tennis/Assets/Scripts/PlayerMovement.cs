@@ -21,8 +21,6 @@ public class PlayerMovement : MonoBehaviour
 
     public void serveBall()
     {
-        ball.resetVelocity();
-
         float randomX = Random.Range(-7 + transform.position.x, transform.position.x + 7);
 
         while (randomX >= 20)
@@ -41,14 +39,13 @@ public class PlayerMovement : MonoBehaviour
         ball.resetVelocity();
         ball.Move(transform.position, new Vector3(randomX, 0, randomZ));
         matchManager.ChangeState(MatchManager.matchState.PlayerHit);
-
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.name == "BallTarget")
         {
-            Debug.LogError("Player collided with ball target");
+            Debug.Log("Player collided with ball target");
         }
     }
 

@@ -8,7 +8,6 @@ public class AIController : MonoBehaviour
     public MatchManager matchManager;
     public GameObject targetObject;
     private Rigidbody rb;
-
     private float power = 0.5f;
     private Vector3 ballPosition;
 
@@ -23,9 +22,12 @@ public class AIController : MonoBehaviour
         {
             rb.velocity = Vector3.zero;
         }
+
+        if (other.gameObject.name == "AI Target")
+        {
+            resetVelocity();
+        }
     }
-
-
 
     public void wake()
     {
@@ -62,8 +64,6 @@ public class AIController : MonoBehaviour
 
     public void serveBall()
     {
-        ball.resetVelocity();
-
         float randomX = Random.Range(-6 + transform.position.x, transform.position.x + 6);
 
         while (randomX >= 20)
@@ -78,9 +78,8 @@ public class AIController : MonoBehaviour
             randomX = Random.Range(0, transform.position.x + 5);
         }
 
-        int randomZ = Random.Range(-7, -20);
+        int randomZ = Random.Range(-8, -32);
         ball.Move(transform.position, new Vector3(randomX, 0.1f, randomZ));
-        ball.resetVelocity();
         matchManager.ChangeState(MatchManager.matchState.AIHit);
     }
 }

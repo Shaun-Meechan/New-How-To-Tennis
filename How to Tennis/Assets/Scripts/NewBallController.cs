@@ -16,14 +16,12 @@ public class NewBallController : MonoBehaviour
     private Vector3 startPoint = new Vector3(0,0,0);
     private Vector3 endPoint = new Vector3(0, 0, 0);
     private Vector3 middlePoint = new Vector3(0, 0, 0);
+    public bool addScore = true;
+    private Collider objectCollider;
     public void Start()
     {
         rb = GetComponent<Rigidbody>();
-        if (rb == null)
-        {
-            Debug.LogError("ERROR: Rigidbody on ball was null!");
-        }
-
+        objectCollider = GetComponent<Collider>();
         ballTransform = GetComponent<Transform>();
     }
 
@@ -33,7 +31,7 @@ public class NewBallController : MonoBehaviour
         {
             if (count < 1.0f)
             {
-                count += 0.5f * Time.deltaTime;
+                count += 0.7f * Time.deltaTime;
 
                 Vector3 m1 = Vector3.Lerp(startPoint, middlePoint, count);
                 Vector3 m2 = Vector3.Lerp(middlePoint, endPoint, count);
@@ -46,12 +44,44 @@ public class NewBallController : MonoBehaviour
             }
         }
     }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.name == "Court")
+        {
+            Debug.Log("addScore = : " + addScore);
+            //Ball hit the court, was it served?
+            if (served == true)
+            {
+                //Ball was served
+                if (matchManager.GetMatchState() == MatchManager.matchState.PlayerHit && addScore == true)
+                {
+                    //Player last hit the ball and now it has hit the court. Give the player a point
+                    matchManager.incrementPlayerScore(1);
+                }
+                else if (matchManager.GetMatchState() == MatchManager.matchState.AIHit && addScore == true)
+                {
+                    //The AI was last to hit the ball and it has now hit the court. Give the AI a point
+                    matchManager.incrementAIScore(1);
+                }
+                else
+                {
+                    Debug.LogError("ERROR: Unexpected match state! Match state is: " + matchManager.GetMatchState());
+                }
+            }
+        }
+    }
     public void Move(Vector3 startPositon, Vector3 endPosition)
     {
+        //Turn off the collider so we don't accidently collide with our own side.
+        objectCollider.enabled = false;
+        resetVelocity();
+        count = 0.0f;
         startPoint = startPositon;
-        endPoint = endPosition;
+        endPoint = new Vector3(endPosition.x, endPosition.y + 4, endPosition.z);
         middlePoint = new Vector3((endPosition.x - startPositon.x) / 2, 10, 0);
         targetSprite.transform.position = new Vector3(endPosition.x, 0.1f ,endPosition.z);
+        StartCoroutine(colliderTimer());
     }
 
     public void resetVelocity()
@@ -78,5 +108,11 @@ public class NewBallController : MonoBehaviour
     public void setTransform(Vector3 newTransform)
     {
         ballTransform.position = newTransform;
+    }
+
+    private IEnumerator colliderTimer()
+    {
+        yield return new WaitForSeconds(1);
+        objectCollider.enabled = true;
     }
 }

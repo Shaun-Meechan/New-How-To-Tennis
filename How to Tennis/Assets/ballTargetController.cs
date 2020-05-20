@@ -35,12 +35,19 @@ public class ballTargetController : MonoBehaviour
             //We have collided with the AI and ball. Hit the ball back
             AI.serveBall();
         }
-        else if (other.gameObject.name == "ball" && playerColliding == true)
+
+        if (other.gameObject.name == "ball" && playerColliding == true)
         {
             Debug.Log("Player collided with ball target and the ball");
             //We have collided with the AI and ball. Hit the ball back
             player.serveBall();
         }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        //If any trigger leaves then we need to reset all the variables.
+        resetCollisionVariables();
     }
 
     public void resetCollisionVariables()
@@ -49,8 +56,6 @@ public class ballTargetController : MonoBehaviour
         playerColliding = false;
         characterColliding = false;
     }
-
-
 
     public bool getCharacterColliding()
     {
