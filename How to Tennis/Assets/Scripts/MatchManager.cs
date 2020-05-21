@@ -13,10 +13,12 @@ public class MatchManager : MonoBehaviour
 		PlayerServe,
 		AIServe,
 		PlayerHit,
-		AIHit
+		AIHit,
+		Finished
 	}
 
 	private matchState MatchState;
+	private bool matchFinished = false;
 	public GameObject playerServeCamera;
 	public GameObject mainCamera;
 	public GameObject joyStickObject;
@@ -29,7 +31,9 @@ public class MatchManager : MonoBehaviour
 	public short AIScore = 0;
 	public TextMeshProUGUI playerScoreText;
 	public TextMeshProUGUI AIScoreText;
+	public TextMeshProUGUI endMatchText;
 	public Canvas scoreCanvas;
+	public Canvas endGameCanvas;
 	private void Start()
 	{
 		updateScoreText();
@@ -40,22 +44,28 @@ public class MatchManager : MonoBehaviour
 	public void resetMatch()
 	{
 		//Reset the player and AI position
-		player.transform.position = new Vector3(0, 0, -23);
-		AI.transform.position = new Vector3(0, 0, 23);
+		player.transform.position = new Vector3(0, 1, -32);
+		AI.transform.position = new Vector3(0, 1, 32);
 		AI.resetVelocity();
 		//Stop the ball from moving
 		ball.resetVelocity();
-
+		//Wait so that everything is back in place before we change our state
+		StartCoroutine(wait());
 		//Move the ball to whoever is serving
-		if (MatchState == matchState.AIServe)
+		switch (MatchState)
 		{
-			//AI is meant to serve. Move the ball to in front of the AI
-			ball.setTransform(new Vector3(0, 1, 20));
-		}
-		else if (MatchState == matchState.PlayerServe)
-		{
-			//Player is meant to serve. Move the ball to in front of the Player
-			ball.setTransform(new Vector3(0, 1, -30));
+			case matchState.PlayerServe:
+				//Player is meant to serve. Move the ball to in front of the Player
+				ball.setTransform(new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z + 2));
+				break;
+			case matchState.AIServe:
+				//AI is meant to serve. Move the ball to in front of the AI
+				ball.setTransform(new Vector3(AI.transform.position.x, AI.transform.position.y, AI.transform.position.z + 2));
+				AI.serveBall();
+			break;
+			default:
+				Debug.LogError("ERROR: Unable to reset ball position");
+				break;
 		}
 	}
 
@@ -101,7 +111,6 @@ public class MatchManager : MonoBehaviour
 				playerServeCamera.SetActive(false);
 				playerHUDCanvas.enabled = false;
 				joyStickObject.SetActive(true);
-				AI.serveBall();
 				break;
 			case matchState.PlayerHit:
 				ball.setServed(true);
@@ -116,7 +125,16 @@ public class MatchManager : MonoBehaviour
 				ball.setServed(true);
 				ballTargetSprite.SetActive(true);
 				break;
+			case matchState.Finished:
+				Debug.Log("Match is finished");
+				matchFinished = true;
+				ballTargetSprite.SetActive(false);
+				playerHUDCanvas.enabled = false;
+				joyStickObject.SetActive(false);
+				ball.gameObject.SetActive(false);
+				break;
 			default:
+				Debug.LogError("ERROR: State was changed to an invalid state.");
 				break;
 		}
 	}
@@ -129,6 +147,13 @@ public class MatchManager : MonoBehaviour
 	public void incrementPlayerScore(short value)
 	{
 		playerScore += value;
+		if (playerScore > 5)
+		{
+			//Player has more than 5 points, they won, end game
+			ChangeState(matchState.Finished);
+			endGameCanvas.enabled = true;
+			endMatchText.text = "You won!";
+		}
 		updateScoreText();
 		ChangeState(matchState.AIServe);
 		resetMatch();
@@ -142,11 +167,17 @@ public class MatchManager : MonoBehaviour
 	public void incrementAIScore(short value)
 	{
 		AIScore += value;
-		updateScoreText();
+		if (AIScore > 5)
+		{
+			//AI has more than 5 points, they won, end game
+			ChangeState(matchState.Finished);
+			endGameCanvas.enabled = true;
+			endMatchText.text = "AI won!";
+		}
 		ChangeState(matchState.PlayerServe);
+		updateScoreText();
 		resetMatch();
 	}
-
 	public short getAIScore()
 	{
 		return AIScore;
@@ -180,4 +211,20 @@ public class MatchManager : MonoBehaviour
 		yield return new WaitForSeconds(3);
 		scoreCanvas.enabled = false;
 	}
+
+	IEnumerator wait()
+    {
+		yield return new WaitForSeconds(1);
+    }
+
+	public bool getMatchFinished()
+    {
+		return matchFinished;
+    }
+
+	//REMOVE ME 
+	public void reloadLevel()
+    {
+		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }

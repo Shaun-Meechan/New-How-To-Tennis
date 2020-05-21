@@ -10,7 +10,7 @@ public class AIController : MonoBehaviour
     private Rigidbody rb;
     private float power = 0.5f;
     private Vector3 ballPosition;
-
+    private bool canServeBall = false;
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -31,29 +31,37 @@ public class AIController : MonoBehaviour
 
     public void wake()
     {
-        int randomNumber = Random.Range(0, 2);
-
-        //If the random number = 1 then we want to go to the ball
-        if (randomNumber == 1)
+        if (matchManager.getMatchFinished() == true)
         {
-            Debug.Log("We are waking up the AI");
-            ballPosition = ball.getEndPoint();
-            Vector3 directionVector = new Vector3(ballPosition.x - transform.position.x, 0, ballPosition.z - transform.position.z);
-
-            rb.AddForce(directionVector * power, ForceMode.Impulse);
+            return;
         }
         else
         {
-            Debug.Log("We are not waking the AI");
+            int randomNumber = Random.Range(0, 2);
 
-            int randomX = Random.Range(-20, 20);
-            int randomZ = Random.Range(5, 20);
+            //If the random number = 1 then we want to go to the ball
+            if (randomNumber == 1)
+            {
+                Debug.Log("We are waking up the AI");
+                ballPosition = ball.getEndPoint();
+                Vector3 directionVector = new Vector3(ballPosition.x - transform.position.x, 0, ballPosition.z - transform.position.z);
 
-            targetObject.SetActive(true);
-            targetObject.transform.position = new Vector3(randomX, 0, randomZ);
-            Vector3 directionVector = new Vector3(randomX - transform.position.x, 0, randomZ - transform.position.z);
+                rb.AddForce(directionVector * power, ForceMode.Impulse);
+            }
+            else
+            {
+                Debug.Log("We are not waking the AI");
 
-            rb.AddForce(directionVector * power, ForceMode.Impulse);
+                int randomX = Random.Range(-20, 20);
+                int randomZ = Random.Range(5, 20);
+
+                targetObject.SetActive(true);
+                targetObject.transform.position = new Vector3(randomX, 0, randomZ);
+                Vector3 directionVector = new Vector3(randomX - transform.position.x, 0, randomZ - transform.position.z);
+
+                rb.AddForce(directionVector * power, ForceMode.Impulse);
+                canServeBall = false;
+            }
         }
     }
 

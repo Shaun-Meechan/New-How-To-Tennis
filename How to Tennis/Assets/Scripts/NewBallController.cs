@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Security.Principal;
 using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -49,11 +50,37 @@ public class NewBallController : MonoBehaviour
     {
         if (other.gameObject.name == "Court")
         {
-            Debug.Log("addScore = : " + addScore);
             //Ball hit the court, was it served?
             if (served == true)
             {
                 //Ball was served
+                if (matchManager.GetMatchState() == MatchManager.matchState.PlayerHit && addScore == true)
+                {
+                    //Player last hit the ball and now it has hit the court. Give the player a point
+                    matchManager.incrementPlayerScore(1);
+                }
+                else if (matchManager.GetMatchState() == MatchManager.matchState.AIHit && addScore == true)
+                {
+                    //The AI was last to hit the ball and it has now hit the court. Give the AI a point
+                    matchManager.incrementAIScore(1);
+                }
+                else
+                {
+                    Debug.LogError("ERROR: Unexpected match state! Match state is: " + matchManager.GetMatchState());
+                }
+            }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name == "BallTarget")
+        {
+            Debug.Log("Ball hit the target");
+            //The ball has hit the ball target
+            if (ballTargetController.getCharacterColliding() == false)
+            {
+                Debug.Log("Ball hit the target but no one received it");
                 if (matchManager.GetMatchState() == MatchManager.matchState.PlayerHit && addScore == true)
                 {
                     //Player last hit the ball and now it has hit the court. Give the player a point
