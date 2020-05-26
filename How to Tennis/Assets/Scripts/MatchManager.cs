@@ -36,6 +36,7 @@ public class MatchManager : MonoBehaviour
 	public Canvas endGameCanvas;
 	private void Start()
 	{
+		//Application.targetFrameRate = 30;
 		updateScoreText();
 		StartCoroutine(hideScoreCanvas());
 		ChangeState(matchState.PlayerServe);
