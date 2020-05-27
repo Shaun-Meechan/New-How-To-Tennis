@@ -17,7 +17,8 @@ public class NewBallController : MonoBehaviour
     private Vector3 startPoint = new Vector3(0,0,0);
     private Vector3 endPoint = new Vector3(0, 0, 0);
     private Vector3 middlePoint = new Vector3(0, 0, 0);
-    public bool addScore = true;
+    private Vector3 m1 = new Vector3(0, 0, 0);
+    private Vector3 m2 = new Vector3(0, 0, 0);
     private Collider objectCollider;
     public void Start()
     {
@@ -34,8 +35,8 @@ public class NewBallController : MonoBehaviour
             {
                 count += 0.7f * Time.deltaTime;
 
-                Vector3 m1 = Vector3.Lerp(startPoint, middlePoint, count);
-                Vector3 m2 = Vector3.Lerp(middlePoint, endPoint, count);
+                m1 = Vector3.Lerp(startPoint, middlePoint, count);
+                m2 = Vector3.Lerp(middlePoint, endPoint, count);
                 transform.position = Vector3.Lerp(m1, m2, count);
             }
 
@@ -54,12 +55,12 @@ public class NewBallController : MonoBehaviour
             if (served == true)
             {
                 //Ball was served
-                if (matchManager.GetMatchState() == MatchManager.matchState.PlayerHit && addScore == true)
+                if (matchManager.GetMatchState() == MatchManager.matchState.PlayerHit)
                 {
                     //Player last hit the ball and now it has hit the court. Give the player a point
                     matchManager.incrementPlayerScore(1);
                 }
-                else if (matchManager.GetMatchState() == MatchManager.matchState.AIHit && addScore == true)
+                else if (matchManager.GetMatchState() == MatchManager.matchState.AIHit)
                 {
                     //The AI was last to hit the ball and it has now hit the court. Give the AI a point
                     matchManager.incrementAIScore(1);
@@ -81,12 +82,12 @@ public class NewBallController : MonoBehaviour
             if (ballTargetController.getCharacterColliding() == false)
             {
                 Debug.Log("Ball hit the target but no one received it");
-                if (matchManager.GetMatchState() == MatchManager.matchState.PlayerHit && addScore == true)
+                if (matchManager.GetMatchState() == MatchManager.matchState.PlayerHit)
                 {
                     //Player last hit the ball and now it has hit the court. Give the player a point
                     matchManager.incrementPlayerScore(1);
                 }
-                else if (matchManager.GetMatchState() == MatchManager.matchState.AIHit && addScore == true)
+                else if (matchManager.GetMatchState() == MatchManager.matchState.AIHit)
                 {
                     //The AI was last to hit the ball and it has now hit the court. Give the AI a point
                     matchManager.incrementAIScore(1);
@@ -113,7 +114,7 @@ public class NewBallController : MonoBehaviour
 
     public void resetVelocity()
     {
-            rb.velocity = Vector3.zero;
+            rb.velocity = new Vector3(0,0,0);
     }
 
     public Vector3 getEndPoint()
