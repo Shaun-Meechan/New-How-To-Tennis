@@ -8,7 +8,6 @@ public class AudioManager : MonoBehaviour
     public AudioClip[] scoreClips;
     public AudioClip[] hitClips;
     public AudioClip applause;
-    // Start is called before the first frame update
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -22,6 +21,14 @@ public class AudioManager : MonoBehaviour
 
     public void playHitClip(int ID)
     {
+        audioSource.clip = hitClips[ID];
+        audioSource.Play();
+    }
+
+    public void playRandomHitClip()
+    {
+        int ID = Random.Range(0, hitClips.Length);
+
         audioSource.clip = hitClips[ID];
         audioSource.Play();
     }

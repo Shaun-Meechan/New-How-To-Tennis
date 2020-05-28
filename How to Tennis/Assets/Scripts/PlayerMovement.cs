@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public Joystick joystick;
     public NewBallController ball;
     public MatchManager matchManager;
+    public AudioManager audioManager;
 
     float horizontalMove = 0.0f;
     float verticalMove = 0.0f;
@@ -21,6 +22,11 @@ public class PlayerMovement : MonoBehaviour
 
     public void serveBall()
     {
+        if (matchManager.getMatchFinished() == true)
+        {
+            return;
+        }
+
         float randomX = Random.Range(-7 + transform.position.x, transform.position.x + 7);
 
         while (randomX >= 20)
@@ -39,14 +45,7 @@ public class PlayerMovement : MonoBehaviour
         ball.resetVelocity();
         ball.Move(transform.position, new Vector3(randomX, 0, randomZ));
         matchManager.ChangeState(MatchManager.matchState.PlayerHit);
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.name == "BallTarget")
-        {
-            Debug.Log("Player collided with ball target");
-        }
+        audioManager.playRandomHitClip();
     }
 
     private void OnCollisionEnter(Collision collision)

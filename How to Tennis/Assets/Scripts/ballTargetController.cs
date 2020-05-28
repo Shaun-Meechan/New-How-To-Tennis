@@ -15,7 +15,6 @@ public class ballTargetController : MonoBehaviour
         //Did we collide with the AI
         if (other.gameObject.name == "AI")
         {
-            Debug.Log("AI collided with ball target");
             characterColliding = true;
             AIColliding = true;
             //We collided with the AI
@@ -24,21 +23,18 @@ public class ballTargetController : MonoBehaviour
         if (other.gameObject.name == "Human")
         {
             //The player collided with the ball target
-            Debug.Log("Player collided with ball target");
             characterColliding = true;
             playerColliding = true;
         }
 
         if (other.gameObject.name == "ball" && AIColliding == true)
         {
-            Debug.Log("AI collided with ball target and the ball");
             //We have collided with the AI and ball. Hit the ball back
             AI.serveBall();
         }
 
         if (other.gameObject.name == "ball" && playerColliding == true)
         {
-            Debug.Log("Player collided with ball target and the ball");
             //We have collided with the AI and ball. Hit the ball back
             player.serveBall();
         }

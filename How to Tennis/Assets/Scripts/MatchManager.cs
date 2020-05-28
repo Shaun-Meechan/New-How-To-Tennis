@@ -34,9 +34,9 @@ public class MatchManager : MonoBehaviour
 	public TextMeshProUGUI endMatchText;
 	public Canvas scoreCanvas;
 	public Canvas endGameCanvas;
+	public AudioManager audioManager;
 	private void Start()
 	{
-		//Application.targetFrameRate = 30;
 		updateScoreText();
 		StartCoroutine(hideScoreCanvas());
 		ChangeState(matchState.PlayerServe);
@@ -127,7 +127,7 @@ public class MatchManager : MonoBehaviour
 				ballTargetSprite.SetActive(true);
 				break;
 			case matchState.Finished:
-				Debug.Log("Match is finished");
+				audioManager.playApplause();
 				matchFinished = true;
 				ballTargetSprite.SetActive(false);
 				playerHUDCanvas.enabled = false;

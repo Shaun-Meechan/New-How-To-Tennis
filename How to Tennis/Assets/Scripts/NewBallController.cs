@@ -77,11 +77,9 @@ public class NewBallController : MonoBehaviour
     {
         if (other.gameObject.name == "BallTarget")
         {
-            Debug.Log("Ball hit the target");
             //The ball has hit the ball target
             if (ballTargetController.getCharacterColliding() == false)
             {
-                Debug.Log("Ball hit the target but no one received it");
                 if (matchManager.GetMatchState() == MatchManager.matchState.PlayerHit)
                 {
                     //Player last hit the ball and now it has hit the court. Give the player a point

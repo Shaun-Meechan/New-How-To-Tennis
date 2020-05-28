@@ -11,6 +11,7 @@ public class AIController : MonoBehaviour
     private float power = 0.5f;
     private Vector3 ballPosition;
     private bool canServeBall = false;
+    public AudioManager audioManager;
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -20,7 +21,7 @@ public class AIController : MonoBehaviour
     {
         if (other.gameObject.name == "BallTarget")
         {
-            rb.velocity = Vector3.zero;
+            rb.velocity = new Vector3(0,0,0);
         }
 
         if (other.gameObject.name == "AI Target")
@@ -42,7 +43,6 @@ public class AIController : MonoBehaviour
             //If the random number = 1 then we want to go to the ball
             if (randomNumber == 1)
             {
-                Debug.Log("We are waking up the AI");
                 ballPosition = ball.getEndPoint();
                 Vector3 directionVector = new Vector3(ballPosition.x - transform.position.x, 0, ballPosition.z - transform.position.z);
 
@@ -50,8 +50,6 @@ public class AIController : MonoBehaviour
             }
             else
             {
-                Debug.Log("We are not waking the AI");
-
                 int randomX = Random.Range(-20, 20);
                 int randomZ = Random.Range(5, 20);
 
@@ -67,11 +65,16 @@ public class AIController : MonoBehaviour
 
     public void resetVelocity()
     {
-        rb.velocity = Vector3.zero;
+        rb.velocity = new Vector3(0,0,0);
     }
 
     public void serveBall()
     {
+        if (matchManager.getMatchFinished() == true)
+        {
+            return;
+        }
+
         float randomX = Random.Range(-6 + transform.position.x, transform.position.x + 6);
 
         while (randomX >= 20)
@@ -89,5 +92,6 @@ public class AIController : MonoBehaviour
         int randomZ = Random.Range(-8, -32);
         ball.Move(transform.position, new Vector3(randomX, 0.1f, randomZ));
         matchManager.ChangeState(MatchManager.matchState.AIHit);
+        audioManager.playRandomHitClip();
     }
 }

@@ -9,7 +9,7 @@ public class HoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     public NewBallController ball;
     public GameObject player;
     public MatchManager matchManager;
-
+    public PlayerMovement playerMovement;
     private bool pointerDown;
     private float pointerDownTimer;
     public float requiredHoldTime;
@@ -28,24 +28,7 @@ public class HoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        float randomX = Random.Range(-7 + player.transform.position.x, player.transform.position.x + 7);
-
-        while (randomX >= 20)
-        {
-            Debug.Log("Waffle was out of court right. Moved");
-            randomX = Random.Range(-5 + player.transform.position.x, 0);
-
-        }
-        while (randomX <= -20)
-        {
-            Debug.Log("Waffle was out of court left. Moved");
-            randomX = Random.Range(0, player.transform.position.x + 5);
-        }
-
-        int randomZ = Random.Range(8, 32);
-        ball.Move(player.transform.position, new Vector3(randomX,0.1f,randomZ));
-        matchManager.ChangeState(MatchManager.matchState.PlayerHit);
-
+        playerMovement.serveBall();
         Reset();
     }
 
