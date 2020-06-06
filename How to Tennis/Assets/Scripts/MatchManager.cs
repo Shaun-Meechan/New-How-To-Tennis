@@ -11,6 +11,7 @@ public class MatchManager : MonoBehaviour
 	public enum matchState
 	{
 		PlayerServe,
+		PlayerServed,
 		AIServe,
 		PlayerHit,
 		AIHit,
@@ -104,6 +105,15 @@ public class MatchManager : MonoBehaviour
 				playerHUDCanvas.enabled = true;
 				mainCamera.SetActive(false);
 				joyStickObject.SetActive(false);
+				break;		
+			case matchState.PlayerServed:
+				ball.setServed(false);
+				ballTargetSprite.SetActive(true);
+				AI.wake();
+				mainCamera.SetActive(true);
+				playerServeCamera.SetActive(false);
+				playerHUDCanvas.enabled = false;
+				joyStickObject.SetActive(true);
 				break;
 			case matchState.AIServe:
 				ball.setServed(false);

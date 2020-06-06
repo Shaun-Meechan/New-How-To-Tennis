@@ -72,11 +72,37 @@ public class PlayerMovement : MonoBehaviour
             randomX = Random.Range(0, transform.position.x + 5);
         }
 
-        int randomZ = Random.Range(7, 20);
+        int randomZ = Random.Range(7, 28);
         ball.resetVelocity();
         ball.Move(transform.position, new Vector3(randomX, 0, randomZ));
         matchManager.ChangeState(MatchManager.matchState.PlayerHit);
         audioManager.playRandomHitClip();
+    }
+
+    public void DoFirstServe()
+    {
+        ball.setFirstServe(true);
+
+        float randomX = Random.Range(-7 + transform.position.x, transform.position.x + 7);
+
+        while (randomX >= 20)
+        {
+            Debug.Log("Waffle was out of court right. Moved");
+            randomX = Random.Range(-5 + transform.position.x, 0);
+
+        }
+        while (randomX <= -20)
+        {
+            Debug.Log("Waffle was out of court left. Moved");
+            randomX = Random.Range(0, transform.position.x + 5);
+        }
+
+        int randomZ = Random.Range(7, 28);
+        ball.resetVelocity();
+        ball.Move(transform.position, new Vector3(randomX, 0, randomZ));
+        matchManager.ChangeState(MatchManager.matchState.PlayerServed);
+        audioManager.playRandomHitClip();
+
     }
 
     private void OnCollisionEnter(Collision collision)

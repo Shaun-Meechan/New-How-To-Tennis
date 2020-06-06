@@ -1,15 +1,12 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
-using System.Security.Principal;
-using System.Text.RegularExpressions;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public class NewBallController : MonoBehaviour
 {
     private Rigidbody rb;
     private Transform ballTransform;
     public GameObject targetSprite;
+    public GameObject firstTargetSprite;
     private bool served = false;
     public MatchManager matchManager;
     public ballTargetController ballTargetController;
@@ -20,6 +17,13 @@ public class NewBallController : MonoBehaviour
     private Vector3 m1 = new Vector3(0, 0, 0);
     private Vector3 m2 = new Vector3(0, 0, 0);
     private Collider objectCollider;
+    private int collisionCount = 0;
+    private bool firstServe = false;
+    //Make these local after debugging
+    Vector3 firstEndPoint = new Vector3(0, 0, 0);
+    Vector3 FirstBounceToEnd = new Vector3(0, 0, 0);
+    private bool doFirstPartOfBounce = false;
+    private bool doSecondPartOfBounce = false;
     public void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -29,6 +33,35 @@ public class NewBallController : MonoBehaviour
 
     private void Update()
     {
+        if (firstServe == true)
+        {
+            if (count < 1.0f)
+            {
+                count += 0.7f * Time.deltaTime;
+
+                if (doFirstPartOfBounce == true)
+                {
+                    Debug.Log("Ball moving to middle");
+                    m1 = Vector3.Lerp(startPoint, middlePoint, count);
+                    m2 = Vector3.Lerp(middlePoint, firstEndPoint, count);
+                    transform.position = Vector3.Lerp(m1, m2, count);
+                }
+
+                if (doSecondPartOfBounce == true)
+                {
+                    Debug.Log("Ball moving to end");
+                    m1 = Vector3.Lerp(firstEndPoint, FirstBounceToEnd, count);
+                    m2 = Vector3.Lerp(FirstBounceToEnd, endPoint, count);
+                    transform.position = Vector3.Lerp(m1, m2, count);
+                }
+
+                if (transform.position == endPoint)
+                {
+                    firstServe = false;
+                }
+
+            }
+        }
         if (served == true)
         {
             if (count < 1.0f)
@@ -39,21 +72,24 @@ public class NewBallController : MonoBehaviour
                 m2 = Vector3.Lerp(middlePoint, endPoint, count);
                 transform.position = Vector3.Lerp(m1, m2, count);
             }
-
-            if (count >= 1.0f)
-            {
-                count = 0.0f;
-            }
         }
+    }
+
+    private void doFirstMove()
+    {
+        //Calculate first end point, used for the bounce
+        firstEndPoint = new Vector3(endPoint.x - middlePoint.x, 0.5f, (endPoint.z - middlePoint.z)/2);
+        FirstBounceToEnd = new Vector3(endPoint.x - firstEndPoint.x, 3, endPoint.z - firstEndPoint.z);
+        firstTargetSprite.transform.position = firstEndPoint;
     }
 
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.name == "Court")
         {
-            //Ball hit the court, was it served?
             if (served == true)
             {
+                collisionCount += 1;
                 //Ball was served
                 if (matchManager.GetMatchState() == MatchManager.matchState.PlayerHit)
                 {
@@ -96,18 +132,34 @@ public class NewBallController : MonoBehaviour
                 }
             }
         }
+        if (other.gameObject.name == "ballFirstTarget")
+        {
+            //Tell the update function todo the section part of the movement
+            doFirstPartOfBounce = false;
+
+            count = 0.0f;   
+
+            doSecondPartOfBounce = true;
+        }
     }
     public void Move(Vector3 startPositon, Vector3 endPosition)
     {
         //Turn off the collider so we don't accidently collide with our own side.
-        objectCollider.enabled = false;
+        //objectCollider.enabled = false;
         resetVelocity();
         count = 0.0f;
         startPoint = startPositon;
-        endPoint = new Vector3(endPosition.x, endPosition.y + 4, endPosition.z);
-        middlePoint = new Vector3((endPosition.x - startPositon.x) / 2, 10, 0);
+        endPoint = new Vector3(endPosition.x, endPosition.y, endPosition.z);
+        middlePoint = new Vector3((endPosition.x - startPositon.x)/2, 10, 0);
         targetSprite.transform.position = new Vector3(endPosition.x, 0.1f ,endPosition.z);
         StartCoroutine(colliderTimer());
+
+        if (firstServe == true)
+        {
+            doFirstMove();
+            doFirstPartOfBounce = true;
+            doSecondPartOfBounce = false;
+        }
     }
 
     public void resetVelocity()
@@ -129,6 +181,11 @@ public class NewBallController : MonoBehaviour
     public void setServed(bool value)
     {
         served = value;
+    }
+
+    public void setFirstServe(bool value)
+    {
+        firstServe = value;
     }
 
     public void setTransform(Vector3 newTransform)
