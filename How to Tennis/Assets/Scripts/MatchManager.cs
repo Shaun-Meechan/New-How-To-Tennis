@@ -13,6 +13,7 @@ public class MatchManager : MonoBehaviour
 		PlayerServe,
 		PlayerServed,
 		AIServe,
+		AIServed,
 		PlayerHit,
 		AIHit,
 		Finished
@@ -118,6 +119,14 @@ public class MatchManager : MonoBehaviour
 			case matchState.AIServe:
 				ball.setServed(false);
 				ballTargetSprite.SetActive(false);
+				mainCamera.SetActive(true);
+				playerServeCamera.SetActive(false);
+				playerHUDCanvas.enabled = false;
+				joyStickObject.SetActive(true);
+				break;
+			case matchState.AIServed:
+				ball.setServed(false);
+				ballTargetSprite.SetActive(true);
 				mainCamera.SetActive(true);
 				playerServeCamera.SetActive(false);
 				playerHUDCanvas.enabled = false;

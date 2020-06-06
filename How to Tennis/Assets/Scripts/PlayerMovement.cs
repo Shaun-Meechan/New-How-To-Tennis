@@ -51,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    public void serveBall()
+    public void hitBall()
     {
         if (matchManager.getMatchFinished() == true)
         {
@@ -77,6 +77,7 @@ public class PlayerMovement : MonoBehaviour
         ball.Move(transform.position, new Vector3(randomX, 0, randomZ));
         matchManager.ChangeState(MatchManager.matchState.PlayerHit);
         audioManager.playRandomHitClip();
+        ball.setFirstServe(false);
     }
 
     public void DoFirstServe()
@@ -87,13 +88,11 @@ public class PlayerMovement : MonoBehaviour
 
         while (randomX >= 20)
         {
-            Debug.Log("Waffle was out of court right. Moved");
             randomX = Random.Range(-5 + transform.position.x, 0);
 
         }
         while (randomX <= -20)
         {
-            Debug.Log("Waffle was out of court left. Moved");
             randomX = Random.Range(0, transform.position.x + 5);
         }
 
@@ -102,7 +101,6 @@ public class PlayerMovement : MonoBehaviour
         ball.Move(transform.position, new Vector3(randomX, 0, randomZ));
         matchManager.ChangeState(MatchManager.matchState.PlayerServed);
         audioManager.playRandomHitClip();
-
     }
 
     private void OnCollisionEnter(Collision collision)

@@ -30,13 +30,13 @@ public class ballTargetController : MonoBehaviour
         if (other.gameObject.name == "ball" && AIColliding == true)
         {
             //We have collided with the AI and ball. Hit the ball back
-            AI.serveBall();
+            AI.hitBall();
         }
 
         if (other.gameObject.name == "ball" && playerColliding == true)
         {
             //We have collided with the AI and ball. Hit the ball back
-            player.serveBall();
+            player.hitBall();
         }
     }
 

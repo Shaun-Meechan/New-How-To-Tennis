@@ -42,7 +42,7 @@ public class AIController : MonoBehaviour
             animUp = true;
         }
 
-        //Make the player go up and down (fake an animation)
+        //Make the AI go up and down (fake an animation)
         if (animUp == true)
         {
             transform.position = new Vector3(transform.position.x, transform.position.y + verticalAnimation, transform.position.z);
@@ -111,6 +111,34 @@ public class AIController : MonoBehaviour
             return;
         }
 
+        ball.setFirstServe(true);
+
+        float randomX = Random.Range(-6 + transform.position.x, transform.position.x + 6);
+
+        while (randomX >= 20)
+        {
+            randomX = Random.Range(-5 + transform.position.x, 0);
+
+        }
+        while (randomX <= -20)
+        {
+            randomX = Random.Range(0, transform.position.x + 5);
+        }
+
+        int randomZ = Random.Range(-8, -32);
+        ball.resetVelocity();
+        ball.Move(transform.position, new Vector3(randomX, 0.1f, randomZ));
+        matchManager.ChangeState(MatchManager.matchState.AIServed);
+        audioManager.playRandomHitClip();
+    }
+
+    public void hitBall()
+    {
+        if (matchManager.getMatchFinished() == true)
+        {
+            return;
+        }
+
         float randomX = Random.Range(-6 + transform.position.x, transform.position.x + 6);
 
         while (randomX >= 20)
@@ -129,5 +157,7 @@ public class AIController : MonoBehaviour
         ball.Move(transform.position, new Vector3(randomX, 0.1f, randomZ));
         matchManager.ChangeState(MatchManager.matchState.AIHit);
         audioManager.playRandomHitClip();
+        ball.setFirstServe(false);
     }
+
 }
