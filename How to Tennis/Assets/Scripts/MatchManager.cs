@@ -26,7 +26,7 @@ public class MatchManager : MonoBehaviour
 	public GameObject joyStickObject;
 	public Canvas playerHUDCanvas;
 	public NewBallController ball;
-	public GameObject player;
+	public GameObject human;
 	public AIController AI;
 	public GameObject ballTargetSprite;
 	public short playerScore = 0;
@@ -34,20 +34,25 @@ public class MatchManager : MonoBehaviour
 	public TextMeshProUGUI playerScoreText;
 	public TextMeshProUGUI AIScoreText;
 	public TextMeshProUGUI endMatchText;
+	public TextMeshProUGUI creditsText;
 	public Canvas scoreCanvas;
 	public Canvas endGameCanvas;
 	public AudioManager audioManager;
+	public Player player;
 	private void Start()
 	{
 		updateScoreText();
 		StartCoroutine(hideScoreCanvas());
 		ChangeState(matchState.PlayerServe);
+
+		PlayerData data = SaveSystem.LoadPlayer();
+		player.credits = data.credits;
 	}
 
 	public void resetMatch()
 	{
 		//Reset the player and AI position
-		player.transform.position = new Vector3(0, 1, -32);
+		human.transform.position = new Vector3(0, 1, -32);
 		AI.transform.position = new Vector3(0, 1, 32);
 		AI.resetVelocity();
 		//Stop the ball from moving
@@ -59,7 +64,7 @@ public class MatchManager : MonoBehaviour
 		{
 			case matchState.PlayerServe:
 				//Player is meant to serve. Move the ball to in front of the Player
-				ball.setTransform(new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z + 2));
+				ball.setTransform(new Vector3(human.transform.position.x, human.transform.position.y, human.transform.position.z + 2));
 				break;
 			case matchState.AIServe:
 				//AI is meant to serve. Move the ball to in front of the AI
@@ -95,7 +100,14 @@ public class MatchManager : MonoBehaviour
 
 	public void ChangeState(matchState newState)
 	{
-		MatchState = newState;
+        if (playerScore == 6 || AIScore == 6)
+        {
+			MatchState = matchState.Finished;
+        }
+        else
+        {
+			MatchState = newState;
+        }
 
 		switch (MatchState)
 		{
@@ -152,6 +164,9 @@ public class MatchManager : MonoBehaviour
 				playerHUDCanvas.enabled = false;
 				joyStickObject.SetActive(false);
 				ball.gameObject.SetActive(false);
+				player.credits += 5;
+				SaveSystem.SavePlayer(player);
+				creditsText.text = "You have " + player.credits + " credits.";
 				break;
 			default:
 				Debug.LogError("ERROR: State was changed to an invalid state.");

@@ -42,7 +42,6 @@ public class NewBallController : MonoBehaviour
 
                 if (doFirstPartOfBounce == true)
                 {
-                    Debug.Log("Ball moving to middle");
                     m1 = Vector3.Lerp(startPoint, middlePoint, count);
                     m2 = Vector3.Lerp(middlePoint, firstEndPoint, count);
                     transform.position = Vector3.Lerp(m1, m2, count);
@@ -50,7 +49,6 @@ public class NewBallController : MonoBehaviour
 
                 if (doSecondPartOfBounce == true)
                 {
-                    Debug.Log("Ball moving to end");
                     m1 = Vector3.Lerp(firstEndPoint, FirstBounceToEnd, count);
                     m2 = Vector3.Lerp(FirstBounceToEnd, endPoint, count);
                     transform.position = Vector3.Lerp(m1, m2, count);
