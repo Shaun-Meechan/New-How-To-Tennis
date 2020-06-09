@@ -24,12 +24,13 @@ public class HoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     public void OnPointerDown(PointerEventData eventData)
     {
         pointerDown = true;
+        playerMovement.animateRacket("PrepareToServe");
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        //playerMovement.serveBall();
         playerMovement.DoFirstServe();
+        playerMovement.animateRacket("Serve");
         Reset();
     }
 

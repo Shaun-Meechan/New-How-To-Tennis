@@ -8,12 +8,15 @@ public class PlayerMovement : MonoBehaviour
     public NewBallController ball;
     public MatchManager matchManager;
     public AudioManager audioManager;
+    public Animator animator;
 
     float horizontalMove = 0.0f;
     float verticalMove = 0.0f;
     float verticalAnimation = 0.0f;
     private bool animUp = false;
     private bool animDown = false;
+    private bool racketAnimForward = false;
+    private bool racketAnimBackwards = false;
     public float speed = 1.0f;
     private float animationSpeed = 0.05f;
     void Update()
@@ -109,6 +112,44 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.LogError("Player collided with ball target");
         }
+    }
 
+    public void animateRacket(string direction)
+    {
+        if (direction == "Serve")
+        {
+            animator.SetBool("DoBackToFront", true);
+            animator.SetBool("DoResetBack", true);
+            animator.SetBool("DoMiddleToBack", false);
+        }
+        else if (direction == "PrepareToServe")
+        {
+            animator.SetBool("DoMiddleToBack", true);
+            animator.SetBool("DoBackToFront", false);
+            animator.SetBool("DoResetBack", false);
+        }
+        else if (direction == "AbortPrepareToServe")
+        {
+            animator.SetBool("DoBackToMiddle", true);
+            animator.SetBool("DoMiddleToBack", false);
+        }
+        else if (direction == "Return")
+        {
+            animator.SetBool("DoMiddleToFront", true);
+        }
+        else if (direction == "Returned")
+        {
+            animator.SetBool("DoFrontToMiddle", true);
+            animator.SetBool("DoMiddleToFront", false);
+        }
+        else if (direction == "Served")
+        {
+            animator.SetBool("DoFrontToMiddle", true);
+            animator.SetBool("DoBackToFront", false);
+        }
+        else
+        {
+            Debug.LogError("ERROR: Input not valid options are 'Serve','PrepareToServe','AbortPrepareToServe','Return','Returned','Served'");
+        }
     }
 }
