@@ -81,6 +81,7 @@ public class PlayerMovement : MonoBehaviour
         matchManager.ChangeState(MatchManager.matchState.PlayerHit);
         audioManager.playRandomHitClip();
         ball.setFirstServe(false);
+        StartCoroutine(resetServeAnimation());
     }
 
     public void DoFirstServe()
@@ -151,5 +152,11 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.LogError("ERROR: Input not valid options are 'Serve','PrepareToServe','AbortPrepareToServe','Return','Returned','Served'");
         }
+    }
+
+    IEnumerator resetServeAnimation()
+    {
+        yield return new WaitForSeconds(1);
+        animateRacket("Returned");
     }
 }
