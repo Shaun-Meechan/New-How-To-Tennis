@@ -30,6 +30,7 @@ public class ballTargetController : MonoBehaviour
         if (other.gameObject.name == "ball" && AIColliding == true)
         {
             //We have collided with the AI and ball. Hit the ball back
+            AI.animateRacket("Return");
             AI.hitBall();
         }
 

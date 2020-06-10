@@ -56,7 +56,9 @@ public class MatchManager : MonoBehaviour
 		AI.transform.position = new Vector3(0, 1, 32);
 		AI.resetVelocity();
 		//Stop the ball from moving
+		ball.resetCounter();
 		ball.resetVelocity();
+		ball.setFirstServe(false);
 		//Wait so that everything is back in place before we change our state
 		StartCoroutine(wait());
 		//Move the ball to whoever is serving

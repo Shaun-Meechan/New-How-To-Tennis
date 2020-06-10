@@ -82,32 +82,6 @@ public class NewBallController : MonoBehaviour
         firstTargetSprite.transform.position = firstEndPoint;
     }
 
-    //private void OnCollisionEnter(Collision other)
-    //{
-    //    if (other.gameObject.name == "Court")
-    //    {
-    //        if (served == true)
-    //        {
-    //            collisionCount += 1;
-    //            //Ball was served
-    //            if (matchManager.GetMatchState() == MatchManager.matchState.PlayerHit || matchManager.GetMatchState() == MatchManager.matchState.PlayerServed)
-    //            {
-    //                //Player last hit the ball and now it has hit the court. Give the player a point
-    //                matchManager.incrementPlayerScore(1);
-    //            }
-    //            else if (matchManager.GetMatchState() == MatchManager.matchState.AIHit)
-    //            {
-    //                //The AI was last to hit the ball and it has now hit the court. Give the AI a point
-    //                matchManager.incrementAIScore(1);
-    //            }
-    //            else
-    //            {
-    //                Debug.LogError("ERROR: Unexpected match state! Match state is: " + matchManager.GetMatchState());
-    //            }
-    //        }
-    //    }
-    //}
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.name == "BallTarget")

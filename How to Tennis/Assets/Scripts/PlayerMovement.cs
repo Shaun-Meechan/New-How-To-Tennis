@@ -81,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
         matchManager.ChangeState(MatchManager.matchState.PlayerHit);
         audioManager.playRandomHitClip();
         ball.setFirstServe(false);
-        StartCoroutine(resetServeAnimation());
+        StartCoroutine(resetReturnAnimation());
     }
 
     public void DoFirstServe()
@@ -154,7 +154,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    IEnumerator resetServeAnimation()
+    IEnumerator resetReturnAnimation()
     {
         yield return new WaitForSeconds(1);
         animateRacket("Returned");

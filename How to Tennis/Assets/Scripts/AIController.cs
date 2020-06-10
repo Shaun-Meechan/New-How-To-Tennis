@@ -7,11 +7,12 @@ public class AIController : MonoBehaviour
     public NewBallController ball;
     public MatchManager matchManager;
     public GameObject targetObject;
+    public AudioManager audioManager;
+    public Animator animator;
     private Rigidbody rb;
     private float power = 0.5f;
     private Vector3 ballPosition;
     private bool canServeBall = false;
-    public AudioManager audioManager;
     private float animationSpeed = 0.05f;
     private float verticalAnimation = 0.0f;
     private bool animUp = false;
@@ -130,6 +131,7 @@ public class AIController : MonoBehaviour
         ball.Move(transform.position, new Vector3(randomX, 0.1f, randomZ));
         matchManager.ChangeState(MatchManager.matchState.AIServed);
         audioManager.playRandomHitClip();
+        animateRacket("Serve");
     }
 
     public void hitBall()
@@ -158,6 +160,51 @@ public class AIController : MonoBehaviour
         matchManager.ChangeState(MatchManager.matchState.AIHit);
         audioManager.playRandomHitClip();
         ball.setFirstServe(false);
+        StartCoroutine(resetReturnAnimation());
+    }
+    public void animateRacket(string direction)
+    {
+        if (direction == "Serve")
+        {
+            animator.SetBool("DoBackToFront", true);
+            animator.SetBool("DoResetBack", true);
+            animator.SetBool("DoMiddleToBack", false);
+        }
+        else if (direction == "PrepareToServe")
+        {
+            animator.SetBool("DoMiddleToBack", true);
+            animator.SetBool("DoBackToFront", false);
+            animator.SetBool("DoResetBack", false);
+        }
+        else if (direction == "AbortPrepareToServe")
+        {
+            animator.SetBool("DoBackToMiddle", true);
+            animator.SetBool("DoMiddleToBack", false);
+        }
+        else if (direction == "Return")
+        {
+            animator.SetBool("DoMiddleToFront", true);
+        }
+        else if (direction == "Returned")
+        {
+            animator.SetBool("DoFrontToMiddle", true);
+            animator.SetBool("DoMiddleToFront", false);
+        }
+        else if (direction == "Served")
+        {
+            animator.SetBool("DoFrontToMiddle", true);
+            animator.SetBool("DoBackToFront", false);
+        }
+        else
+        {
+            Debug.LogError("ERROR: Input not valid options are 'Serve','PrepareToServe','AbortPrepareToServe','Return','Returned','Served'");
+        }
+    }
+
+    IEnumerator resetReturnAnimation()
+    {
+        yield return new WaitForSeconds(1);
+        animateRacket("Returned");
     }
 
 }
