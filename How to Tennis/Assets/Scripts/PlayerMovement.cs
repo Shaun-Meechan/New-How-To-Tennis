@@ -8,19 +8,32 @@ public class PlayerMovement : MonoBehaviour
     public NewBallController ball;
     public MatchManager matchManager;
     public AudioManager audioManager;
-    public Animator animator;
+    public Animator animatorL;
+    public Animator animatorR;
+    public GameObject RacketLeft;
+    public GameObject RacketRight;
 
     float horizontalMove = 0.0f;
     float verticalMove = 0.0f;
     float verticalAnimation = 0.0f;
     private bool animUp = false;
     private bool animDown = false;
-    private bool racketAnimForward = false;
-    private bool racketAnimBackwards = false;
     public float speed = 1.0f;
-    private float animationSpeed = 0.05f;
+    private readonly float animationSpeed = 0.05f;
     void Update()
     {
+        if (joystick.Horizontal < 0)
+        {
+            //Joystick is pulling left, enable left racket
+            RacketLeft.SetActive(true);
+            RacketRight.SetActive(false);
+        }
+        else if(joystick.Horizontal > 0)
+        {
+            //Joystick is pulling right, enbale right racket
+            RacketLeft.SetActive(false);
+            RacketRight.SetActive(true);
+        }
         horizontalMove = joystick.Horizontal * speed;
         verticalMove = joystick.Vertical * speed;
         verticalAnimation = 1.0f * animationSpeed;
@@ -119,34 +132,53 @@ public class PlayerMovement : MonoBehaviour
     {
         if (direction == "Serve")
         {
-            animator.SetBool("DoBackToFront", true);
-            animator.SetBool("DoResetBack", true);
-            animator.SetBool("DoMiddleToBack", false);
+            animatorL.SetBool("DoBackToFront", true);
+            animatorL.SetBool("DoResetBack", true);
+            animatorL.SetBool("DoMiddleToBack", false);     
+            
+            animatorR.SetBool("DoBackToFront", true);
+            animatorR.SetBool("DoResetBack", true);
+            animatorR.SetBool("DoMiddleToBack", false);
         }
         else if (direction == "PrepareToServe")
         {
-            animator.SetBool("DoMiddleToBack", true);
-            animator.SetBool("DoBackToFront", false);
-            animator.SetBool("DoResetBack", false);
+            animatorL.SetBool("DoMiddleToBack", true);
+            animatorL.SetBool("DoBackToFront", false);
+            animatorL.SetBool("DoResetBack", false);
+
+            animatorR.SetBool("DoMiddleToBack", true);
+            animatorR.SetBool("DoBackToFront", false);
+            animatorR.SetBool("DoResetBack", false);
         }
         else if (direction == "AbortPrepareToServe")
         {
-            animator.SetBool("DoBackToMiddle", true);
-            animator.SetBool("DoMiddleToBack", false);
+            animatorL.SetBool("DoBackToMiddle", true);
+            animatorL.SetBool("DoMiddleToBack", false);
+
+            animatorR.SetBool("DoBackToMiddle", true);
+            animatorR.SetBool("DoMiddleToBack", false);
         }
         else if (direction == "Return")
         {
-            animator.SetBool("DoMiddleToFront", true);
+            animatorL.SetBool("DoMiddleToFront", true);
+
+            animatorR.SetBool("DoMiddleToFront", true);
         }
         else if (direction == "Returned")
         {
-            animator.SetBool("DoFrontToMiddle", true);
-            animator.SetBool("DoMiddleToFront", false);
+            animatorL.SetBool("DoFrontToMiddle", true);
+            animatorL.SetBool("DoMiddleToFront", false); 
+            
+            animatorR.SetBool("DoFrontToMiddle", true);
+            animatorR.SetBool("DoMiddleToFront", false);
         }
         else if (direction == "Served")
         {
-            animator.SetBool("DoFrontToMiddle", true);
-            animator.SetBool("DoBackToFront", false);
+            animatorL.SetBool("DoFrontToMiddle", true);
+            animatorL.SetBool("DoBackToFront", false);
+
+            animatorR.SetBool("DoFrontToMiddle", true);
+            animatorR.SetBool("DoBackToFront", false);
         }
         else
         {
