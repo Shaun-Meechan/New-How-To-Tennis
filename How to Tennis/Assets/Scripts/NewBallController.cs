@@ -18,9 +18,8 @@ public class NewBallController : MonoBehaviour
     private Vector3 m1 = new Vector3(0, 0, 0);
     private Vector3 m2 = new Vector3(0, 0, 0);
     private Collider objectCollider;
-    private int collisionCount = 0;
     private bool firstServe = false;
-    //Make these local after debugging
+    private float countIncreaseSpeed = 1.0f;
     Vector3 firstEndPoint = new Vector3(0, 0, 0);
     Vector3 FirstBounceToEnd = new Vector3(0, 0, 0);
     private bool doFirstPartOfBounce = false;
@@ -38,7 +37,7 @@ public class NewBallController : MonoBehaviour
         {
             if (count < 1.0f)
             {
-                count += 1.0f * Time.deltaTime;
+                count += countIncreaseSpeed * Time.deltaTime;
 
                 if (doFirstPartOfBounce == true)
                 {
@@ -174,5 +173,14 @@ public class NewBallController : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         objectCollider.enabled = true;
+    }
+
+    /// <summary>
+    /// Set the speed at which count increase in the update function. A value higher than 1 is undesirable.
+    /// </summary>
+    /// <param name="value"></param>
+    public void setCountIncreaseSpeed(float value)
+    {
+        countIncreaseSpeed = value;
     }
 }

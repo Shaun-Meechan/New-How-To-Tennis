@@ -16,7 +16,6 @@ public class AIController : MonoBehaviour
     private Rigidbody rb;
     private float power = 0.5f;
     private Vector3 ballPosition;
-    private bool canServeBall = false;
     private float animationSpeed = 0.05f;
     private float verticalAnimation = 0.0f;
     private bool animUp = false;
@@ -111,7 +110,6 @@ public class AIController : MonoBehaviour
                 Vector3 directionVector = new Vector3(randomX - transform.position.x, 0, randomZ - transform.position.z);
 
                 rb.AddForce(directionVector * power, ForceMode.Impulse);
-                canServeBall = false;
             }
         }
     }

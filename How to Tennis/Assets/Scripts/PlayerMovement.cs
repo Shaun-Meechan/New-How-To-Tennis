@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public Animator animatorR;
     public GameObject RacketLeft;
     public GameObject RacketRight;
+    public SkinObject currentSkin;
 
     float horizontalMove = 0.0f;
     float verticalMove = 0.0f;
@@ -20,6 +21,12 @@ public class PlayerMovement : MonoBehaviour
     private bool animDown = false;
     public float speed = 1.0f;
     private readonly float animationSpeed = 0.05f;
+
+    private void Start()
+    {
+        MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
+        meshRenderer.material = currentSkin.skin;
+    }
     void Update()
     {
         if (joystick.Horizontal < 0)

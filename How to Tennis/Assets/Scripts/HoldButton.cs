@@ -16,8 +16,6 @@ public class HoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
     public UnityEvent onLongClick;
 
-    private float power = 0.0f;
-
     [SerializeField]
     private Image fillImage;
 
@@ -29,6 +27,7 @@ public class HoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
     public void OnPointerUp(PointerEventData eventData)
     {
+        ball.setCountIncreaseSpeed(pointerDownTimer);
         playerMovement.DoFirstServe();
         playerMovement.animateRacket("Serve");
         Reset();
