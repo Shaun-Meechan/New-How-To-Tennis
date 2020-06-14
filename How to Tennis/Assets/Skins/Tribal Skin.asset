@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5aaab7f9dfa4c44e960f9dc041aa882, type: 3}
-  m_Name: Default Skin
+  m_Name: Tribal Skin
   m_EditorClassIdentifier: 
-  skinName: Default Skin
-  cost: 0
-  description: The deafult skin
-  skin: {fileID: 2100000, guid: 7f823234cae8cfb498a80e3d219d0bd2, type: 2}
+  skinName: Tribal
+  cost: 100
+  description: Tribal Desctiption
+  skin: {fileID: 2100000, guid: ef427b082402adf4db76061e1dcefb24, type: 2}

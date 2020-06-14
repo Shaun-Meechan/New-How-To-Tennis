@@ -31,6 +31,11 @@ public class HoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         playerMovement.DoFirstServe();
         playerMovement.animateRacket("Serve");
         Reset();
+
+        if (pointerDownTimer < 0.45f)
+        {
+            Debug.Log("Speed was less than 0.45, fail?");
+        }
     }
 
     private void Update()
