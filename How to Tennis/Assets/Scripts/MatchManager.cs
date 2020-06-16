@@ -28,6 +28,7 @@ public class MatchManager : MonoBehaviour
 	public NewBallController ball;
 	public GameObject human;
 	public AIController AI;
+	public PlayerMovement playerObject;
 	public GameObject ballTargetSprite;
 	public short playerScore = 0;
 	public short AIScore = 0;
@@ -39,6 +40,7 @@ public class MatchManager : MonoBehaviour
 	public Canvas endGameCanvas;
 	public AudioManager audioManager;
 	public Player player;
+	public SkinLoader skinLoader;
 	private void Start()
 	{
 		updateScoreText();
@@ -47,6 +49,8 @@ public class MatchManager : MonoBehaviour
 
 		PlayerData data = SaveSystem.LoadPlayer();
 		player.credits = data.credits;
+		Material tempSkin = skinLoader.getSkinMaterial(data.skinID);
+		playerObject.setSkin(tempSkin);
 	}
 
 	public void resetMatch()
@@ -263,5 +267,10 @@ public class MatchManager : MonoBehaviour
 	public void reloadLevel()
     {
 		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+	public void playHitSound()
+    {
+		audioManager.playRandomHitClip();
     }
 }

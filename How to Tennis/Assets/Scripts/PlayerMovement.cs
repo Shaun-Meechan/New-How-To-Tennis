@@ -7,13 +7,11 @@ public class PlayerMovement : MonoBehaviour
     public Joystick joystick;
     public NewBallController ball;
     public MatchManager matchManager;
-    public AudioManager audioManager;
     public Animator animatorL;
     public Animator animatorR;
     public GameObject RacketLeft;
     public GameObject RacketRight;
-    public SkinObject currentSkin;
-
+    public SkinLoader skinLoader;
     float horizontalMove = 0.0f;
     float verticalMove = 0.0f;
     float verticalAnimation = 0.0f;
@@ -22,11 +20,6 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 1.0f;
     private readonly float animationSpeed = 0.05f;
 
-    private void Start()
-    {
-        MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
-        meshRenderer.material = currentSkin.skin;
-    }
     void Update()
     {
         if (joystick.Horizontal < 0)
@@ -74,6 +67,12 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    public void setSkin(Material skinMaterial)
+    {
+        MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
+        meshRenderer.material = skinMaterial;
+    }
+
     public void hitBall()
     {
         if (matchManager.getMatchFinished() == true)
@@ -99,7 +98,7 @@ public class PlayerMovement : MonoBehaviour
         ball.resetVelocity();
         ball.Move(transform.position, new Vector3(randomX, 0, randomZ));
         matchManager.ChangeState(MatchManager.matchState.PlayerHit);
-        audioManager.playRandomHitClip();
+        matchManager.playHitSound();
         ball.setFirstServe(false);
         StartCoroutine(resetReturnAnimation());
     }
@@ -124,7 +123,7 @@ public class PlayerMovement : MonoBehaviour
         ball.resetVelocity();
         ball.Move(transform.position, new Vector3(randomX, 0, randomZ));
         matchManager.ChangeState(MatchManager.matchState.PlayerServed);
-        audioManager.playRandomHitClip();
+        matchManager.playHitSound();
     }
 
     private void OnCollisionEnter(Collision collision)

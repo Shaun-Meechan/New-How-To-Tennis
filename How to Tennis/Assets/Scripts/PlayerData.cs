@@ -6,10 +6,10 @@ using UnityEngine;
 public class PlayerData
 {
     public int credits;
-
+    public int skinID;
     public PlayerData (Player player)
     {
         credits = player.credits;
+        skinID = player.skin.ID;
     }
-
 }

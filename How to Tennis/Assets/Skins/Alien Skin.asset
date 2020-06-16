@@ -15,4 +15,5 @@ MonoBehaviour:
   skinName: Alien Skin
   cost: 100
   description: Alien Skin Desctiption
+  ID: 3
   skin: {fileID: 2100000, guid: 220c71ef0538a594ba0e0059b3d84d91, type: 2}

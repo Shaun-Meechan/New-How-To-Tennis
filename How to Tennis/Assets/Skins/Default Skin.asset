@@ -15,4 +15,5 @@ MonoBehaviour:
   skinName: Default Skin
   cost: 0
   description: The deafult skin
+  ID: 0
   skin: {fileID: 2100000, guid: 7f823234cae8cfb498a80e3d219d0bd2, type: 2}

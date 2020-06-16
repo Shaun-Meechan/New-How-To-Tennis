@@ -8,7 +8,6 @@ public class AIController : MonoBehaviour
     public NewBallController ball;
     public MatchManager matchManager;
     public GameObject targetObject;
-    public AudioManager audioManager;
     public Animator animatorL;
     public Animator animatorR;
     public GameObject RacketL;
@@ -144,7 +143,7 @@ public class AIController : MonoBehaviour
         ball.resetVelocity();
         ball.Move(transform.position, new Vector3(randomX, 0.1f, randomZ));
         matchManager.ChangeState(MatchManager.matchState.AIServed);
-        audioManager.playRandomHitClip();
+        matchManager.playHitSound();
         animateRacket("Serve");
     }
 
@@ -172,7 +171,7 @@ public class AIController : MonoBehaviour
         int randomZ = Random.Range(-8, -32);
         ball.Move(transform.position, new Vector3(randomX, 0.1f, randomZ));
         matchManager.ChangeState(MatchManager.matchState.AIHit);
-        audioManager.playRandomHitClip();
+        matchManager.playHitSound();
         ball.setFirstServe(false);
         StartCoroutine(resetReturnAnimation());
     }

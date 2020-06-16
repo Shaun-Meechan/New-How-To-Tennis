@@ -15,4 +15,5 @@ MonoBehaviour:
   skinName: Tribal
   cost: 100
   description: Tribal Desctiption
+  ID: 1
   skin: {fileID: 2100000, guid: ef427b082402adf4db76061e1dcefb24, type: 2}
