@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BuyButton : MonoBehaviour
+public class StoreButton : MonoBehaviour
 {
     public SkinObject linkedSkin;
     public ShopSystem shopSystem;

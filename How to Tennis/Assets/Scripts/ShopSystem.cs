@@ -14,10 +14,12 @@ public class ShopSystem : MonoBehaviour
         {
             //Player can afford the item. Allow purchase
             player.skin = item;
+            player.addSkin(item.ID);
             player.credits -= cost;
             Debug.Log("Player purcahsed an item!");
             //Update the credits text
             creditsText.text = "Credits: " + player.credits;
+            SaveSystem.SavePlayer(player);
             //Play a noise
         }
         else

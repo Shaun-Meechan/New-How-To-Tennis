@@ -16,10 +16,26 @@ public class MainMenu : MonoBehaviour
         //Load the player data and setup the player
         playerData = SaveSystem.LoadPlayer();
         player.credits = playerData.credits;
-        player.skin = skinLoader.getSkin(playerData.skinID);
-
-        //Setup the credits text
         creditsText.text = "Credits: " + player.credits;
+        player.skin = skinLoader.getSkin(playerData.skinID);
+        player.firstTime = playerData.firstTime;
+        player.skinsOwnedIDs = new int[4];
+        //Setup the credits text
+
+        //If it is the players first time playing they will have no skins. No point in loading an array of 0's from disk.
+        if (player.firstTime == true)
+        {
+            player.firstTime = false;
+            SaveSystem.SavePlayer(player);
+        }
+        else
+        {
+            //Load player skins IDs
+            for (int i = 0; i < 4; i++)
+            {
+                player.skinsOwnedIDs[i] = playerData.skinsOwnedIDs[i];
+            }
+        }
     }
 
     public void showStore()
