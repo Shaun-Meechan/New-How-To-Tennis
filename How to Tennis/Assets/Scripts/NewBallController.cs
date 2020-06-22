@@ -19,7 +19,7 @@ public class NewBallController : MonoBehaviour
     private Vector3 m2 = new Vector3(0, 0, 0);
     private Collider objectCollider;
     private bool firstServe = false;
-    private float countIncreaseSpeed = 1.0f;
+    private float countIncreaseSpeed = 1.5f;
     Vector3 firstEndPoint = new Vector3(0, 0, 0);
     Vector3 FirstBounceToEnd = new Vector3(0, 0, 0);
     private bool doFirstPartOfBounce = false;
