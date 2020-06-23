@@ -123,7 +123,7 @@ public class NewBallController : MonoBehaviour
         startPoint = startPositon;
         endPoint = new Vector3(endPosition.x, endPosition.y, endPosition.z);
         middlePoint = new Vector3((endPosition.x - startPositon.x)/2, 10, 0);
-        targetSprite.transform.position = new Vector3(endPosition.x, 0.1f ,endPosition.z);
+        targetSprite.transform.position = new Vector3(endPosition.x, 0.2f ,endPosition.z);
         StartCoroutine(colliderTimer());
 
         if (firstServe == true)
@@ -183,4 +183,5 @@ public class NewBallController : MonoBehaviour
     {
         countIncreaseSpeed = value;
     }
+
 }

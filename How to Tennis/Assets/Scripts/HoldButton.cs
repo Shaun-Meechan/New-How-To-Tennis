@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using System.Text.RegularExpressions;
+
 public class HoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     public NewBallController ball;
@@ -27,15 +29,18 @@ public class HoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        ball.setCountIncreaseSpeed(pointerDownTimer);
-        playerMovement.DoFirstServe();
-        playerMovement.animateRacket("Serve");
-        Reset();
-
         if (pointerDownTimer < 0.45f)
         {
             Debug.Log("Speed was less than 0.45, fail?");
+            matchManager.incrementFailedServes();
         }
+        else
+        {
+            ball.setCountIncreaseSpeed(pointerDownTimer);
+            playerMovement.DoFirstServe();
+            playerMovement.animateRacket("Serve");
+        }
+        Reset();
     }
 
     private void Update()

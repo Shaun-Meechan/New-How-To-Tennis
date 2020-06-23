@@ -21,6 +21,7 @@ public class MatchManager : MonoBehaviour
 
 	private matchState MatchState;
 	private bool matchFinished = false;
+	private int failedServes = 0;
 	public GameObject playerServeCamera;
 	public GameObject mainCamera;
 	public GameObject joyStickObject;
@@ -224,7 +225,9 @@ public class MatchManager : MonoBehaviour
 		return AIScore;
 	}
 	
-	//Function to update our score text. Could be done in update but better to do it this way to save power
+	/// <summary>
+	/// Updates score text. Should be called after a score has been incremented.
+	/// </summary>
 	private void updateScoreText()
 	{
 		playerScoreText.text = "Player Score: " + playerScore;
@@ -263,10 +266,25 @@ public class MatchManager : MonoBehaviour
 		return matchFinished;
     }
 
-	//REMOVE ME 
-	public void reloadLevel()
+	/// <summary>
+	/// Count how many times the player failed to serve the ball. If they fail twice give a point to the AI and let it serve.
+	/// </summary>
+	public void incrementFailedServes()
     {
-		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+		failedServes += 1;
+        if (failedServes > 2)
+        {
+			//Player failed to serve twice. Give AI point and let it serve
+			failedServes = 0;
+			incrementAIScore(1);
+			ChangeState(matchState.AIServe);
+			resetMatch();
+        }
+        else
+        {
+			//First or second failed serve. Give the player another chance
+			ChangeState(matchState.PlayerServe);
+        }
     }
 
 	public void playHitSound()
