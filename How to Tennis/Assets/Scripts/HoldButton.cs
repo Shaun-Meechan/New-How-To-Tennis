@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
-using System.Text.RegularExpressions;
 
 public class HoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
@@ -16,10 +15,8 @@ public class HoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     private float pointerDownTimer;
     public float requiredHoldTime;
 
-    public UnityEvent onLongClick;
-
     [SerializeField]
-    private Image fillImage;
+    public Image fillImage;
 
     public void OnPointerDown(PointerEventData eventData)
     {
@@ -50,10 +47,6 @@ public class HoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             pointerDownTimer += Time.deltaTime;
             if (pointerDownTimer >= requiredHoldTime)
             {
-                if (onLongClick != null)
-                {
-                    onLongClick.Invoke();
-                }
                 Reset();
             }
             fillImage.fillAmount = pointerDownTimer / requiredHoldTime;
