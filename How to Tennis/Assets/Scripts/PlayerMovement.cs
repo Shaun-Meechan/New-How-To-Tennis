@@ -4,24 +4,41 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    //Variable to store the joystick object
     public Joystick joystick;
+    //Variable to store the ball
     public NewBallController ball;
+    //Variable to store the match manager
     public MatchManager matchManager;
+    //Variables to store the animators
     public Animator animatorL;
     public Animator animatorR;
+    //Variables to store the rackets
     public GameObject RacketLeft;
     public GameObject RacketRight;
+    //Variable to store the skin loader
     public SkinLoader skinLoader;
+    //Variables to store movement data
     float horizontalMove = 0.0f;
     float verticalMove = 0.0f;
     float verticalAnimation = 0.0f;
+    //Variables to store if the player should animate up or down
     private bool animUp = false;
     private bool animDown = false;
+    //Float to store movement speed
     public float speed = 1.0f;
+    //Float to store animation speed
     private readonly float animationSpeed = 0.05f;
+
+    private void Start()
+    {
+        //Vertical animation is used to change our Y position each frame. The value is based on 1.0 * our defined animation speed.
+        verticalAnimation = 1.0f * animationSpeed;
+    }
 
     void Update()
     {
+        //Get data from the joystick and use that to move the player
         if (joystick.Horizontal < 0)
         {
             //Joystick is pulling left, enable left racket
@@ -36,19 +53,21 @@ public class PlayerMovement : MonoBehaviour
         }
         horizontalMove = joystick.Horizontal * speed;
         verticalMove = joystick.Vertical * speed;
-        verticalAnimation = 1.0f * animationSpeed;
         transform.position = new Vector3(transform.position.x + horizontalMove, transform.position.y, transform.position.z + verticalMove);
 
+        //Check to see if we are below our max Y position and we are able to go up.
         if (transform.position.y <= 2.0f && animDown == false)
         {
             animDown = false;
             animUp = true;
         }
+        //Check to see if we are above our max Y position. If so flip the variables and go down.
         else if (transform.position.y >= 2.0f)
         {
             animUp = false;
             animDown = true;
         }
+        //Check to see if we are below our min Y position. If so flip the variables and go up.
         else if (transform.position.y <= 1.0)
         {
             animDown = false;
@@ -67,21 +86,30 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Sets the current skin
+    /// </summary>
     public void setSkin(Material skinMaterial)
     {
         MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
         meshRenderer.material = skinMaterial;
     }
 
+    /// <summary>
+    /// Function to return the ball
+    /// </summary>
     public void hitBall()
     {
+        //If the match is over ignore spurious wake up calls
         if (matchManager.getMatchFinished() == true)
         {
             return;
         }
 
+        //Generate a random target and make sure it is inside the court.
         float randomX = Random.Range(-7 + transform.position.x, transform.position.x + 7);
 
+        //If the target is outside the court move it back in.
         while (randomX >= 20)
         {
             Debug.Log("Waffle was out of court right. Moved");
@@ -95,20 +123,31 @@ public class PlayerMovement : MonoBehaviour
         }
 
         int randomZ = Random.Range(7, 28);
-        ball.resetVelocity();
+
+        //Give the ball our transform and target so it can move
         ball.Move(transform.position, new Vector3(randomX, 0, randomZ));
+        //Tell the match manager the player has hit the ball.
         matchManager.ChangeState(MatchManager.matchState.PlayerHit);
+        //Get the manager to play a sfx
         matchManager.playHitSound();
+        //Set the first serve variable to false on the ball. This allows it to behave properly.
         ball.setFirstServe(false);
+        //Start our reset animation to return the racket to the correct position.
         StartCoroutine(resetReturnAnimation());
     }
 
+    /// <summary>
+    /// Function to serve the ball
+    /// </summary>
     public void DoFirstServe()
     {
+        //Set first serve on the ball to true
         ball.setFirstServe(true);
 
+        //Generate a target to hit the ball towards
         float randomX = Random.Range(-7 + transform.position.x, transform.position.x + 7);
 
+        //If the target is out of the court move it in
         while (randomX >= 20)
         {
             randomX = Random.Range(-5 + transform.position.x, 0);
@@ -120,22 +159,23 @@ public class PlayerMovement : MonoBehaviour
         }
 
         int randomZ = Random.Range(7, 28);
+
+        //Make sure the ball isn't moving
         ball.resetVelocity();
+        //Give the ball the player's position and the target position to allow the ball to move
         ball.Move(transform.position, new Vector3(randomX, 0, randomZ));
+        //Tell the match manager the player has served the ball
         matchManager.ChangeState(MatchManager.matchState.PlayerServed);
+        //Get the match manager to play a sfx
         matchManager.playHitSound();
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.name == "BallTarget")
-        {
-            Debug.LogError("Player collided with ball target");
-        }
-    }
-
+    /// <summary>
+    /// Function to animate the racket
+    /// </summary>
     public void animateRacket(string direction)
     {
+        //Check to see what direction we were given and perfrom the relevant action.
         if (direction == "Serve")
         {
             animatorL.SetBool("DoBackToFront", true);
@@ -192,6 +232,10 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Coroutine to reset the return animation
+    /// </summary>
+    /// <returns></returns>
     IEnumerator resetReturnAnimation()
     {
         yield return new WaitForSeconds(1);

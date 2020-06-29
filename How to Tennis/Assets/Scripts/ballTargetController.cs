@@ -15,14 +15,14 @@ public class ballTargetController : MonoBehaviour
         //Did we collide with the AI
         if (other.gameObject.name == "AI")
         {
+            //We collided with the AI, set the relevant varibles to true
             characterColliding = true;
             AIColliding = true;
-            //We collided with the AI
         }
 
         if (other.gameObject.name == "Human")
         {
-            //The player collided with the ball target
+            //The player collided with the ball target, set the relevant variables true
             characterColliding = true;
             playerColliding = true;
         }
@@ -48,6 +48,9 @@ public class ballTargetController : MonoBehaviour
         resetCollisionVariables();
     }
 
+    /// <summary>
+    /// Reset all collision variables the ball target is storing to false.
+    /// </summary>
     public void resetCollisionVariables()
     {
         AIColliding = false;
@@ -55,6 +58,10 @@ public class ballTargetController : MonoBehaviour
         characterColliding = false;
     }
 
+    /// <summary>
+    /// Find out if the AI or player are colliding with the target.
+    /// </summary>
+    /// <returns>A bool representing if the player or AI are colliding with the target</returns>
     public bool getCharacterColliding()
     {
         return characterColliding;

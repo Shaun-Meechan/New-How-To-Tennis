@@ -1,22 +1,25 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 
 public class ShopSystem : MonoBehaviour
 {
+    //Variable to store the player
     public Player player;
+    //Reference to the credits text
     public TextMeshProUGUI creditsText;
+
+    /// <summary>
+    /// Function that attempts to purchase an item for the player
+    /// </summary>
     public void buyItem(SkinObject item, int cost)
     {
-        Debug.Log("Player has attempted to buy an item!");
+        //Check to see if the player can afford the item
         if (player.credits >= cost)
         {
             //Player can afford the item. Allow purchase
             player.skin = item;
             player.addSkin(item.ID);
             player.credits -= cost;
-            Debug.Log("Player purcahsed an item!");
             //Update the credits text
             creditsText.text = "Credits: " + player.credits;
             SaveSystem.SavePlayer(player);
@@ -26,7 +29,6 @@ public class ShopSystem : MonoBehaviour
         {
             //Player can't afford the item. Don't allow purchase
             //Play a noise and show an icon or something
-            Debug.Log("Player can't afford item");
         }
     }
 }

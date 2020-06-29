@@ -1,12 +1,13 @@
-﻿using DG.Tweening.Core.Easing;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SkinLoader : MonoBehaviour
 {
+    //Variable to store all the skins in the game
     public SkinObject[] skins;
 
+    /// <summary>
+    /// Returns a skin material based on a passed in ID
+    /// </summary>
     public Material getSkinMaterial(int ID)
     {
         bool found = false;
@@ -32,6 +33,9 @@ public class SkinLoader : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Returns a skin based on the passed in ID
+    /// </summary>
     public SkinObject getSkin(int ID)
     {
         bool found = false;

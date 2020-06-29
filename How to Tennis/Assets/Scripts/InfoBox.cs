@@ -1,16 +1,25 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 public class InfoBox : MonoBehaviour
 {
+    //Variable to store a passed in skin object
     private SkinObject skinObject;
+    //Variable to store the description text of the passed in skin
     public TextMeshProUGUI descriptionText;
+    //Variable to store the cost text of the passed in skin
     public TextMeshProUGUI costText;
+    //Variable to store the player
     public Player player;
+    //Variable to store the buy button
     public GameObject buyButton;
+    //Variable to store the buy button script
     public BuyButton buyButtonScript;
+    //Variable to store the select button
     public GameObject selectButton;
+
+    /// <summary>
+    /// Function to set our local skin object to a skin that has been passed in
+    /// </summary>
     public void setSkinObject(SkinObject newSkinObject)
     {
         skinObject = newSkinObject;
@@ -18,6 +27,9 @@ public class InfoBox : MonoBehaviour
         setupData();
     }
 
+    /// <summary>
+    /// Function to set the text to the correct input and find out if the player can select the skin or they need to buy iy
+    /// </summary>
     private void setupData()
     {
         bool found = false;

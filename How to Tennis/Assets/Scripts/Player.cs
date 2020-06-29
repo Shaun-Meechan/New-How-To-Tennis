@@ -1,13 +1,21 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿//Script from https://www.youtube.com/watch?v=XOjd_qU2Ido
+//Modified by Shaun Meechan to include relevan project data.
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    //Variable to represent how much money the player has
     public int credits = 0;
+    //Array to store what skins the player has in a Serializable format
     public int[] skinsOwnedIDs;
+    //Variable storing the current skin being used
     public SkinObject skin;
+    //Variable to represent if this is the player's first time playing the game
     public bool firstTime = true;
+
+    /// <summary>
+    /// Function to add a new skin to the player owned skins
+    /// </summary>
     public void addSkin(int ID)
     {
         Debug.Log("Adding a skin to array");
@@ -27,6 +35,10 @@ public class Player : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Function to reset the player's skin array.
+    /// SHOULD ONLY BE USED IF THE SAVE FILE HAS BEEN CORRUPTED IN SOME WAY!
+    /// </summary>
     public void resetSkinsArray()
     {
         for (int i = 0; i < skinsOwnedIDs.Length; i++)

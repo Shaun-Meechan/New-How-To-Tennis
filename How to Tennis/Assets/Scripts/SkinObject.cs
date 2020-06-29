@@ -1,7 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿//Editor script to allow creation of new skins
+
 using UnityEngine;
-using UnityEngine.Rendering;
 
 [CreateAssetMenu(fileName = "New Skin", menuName = "Skin")]
 public class SkinObject : ScriptableObject

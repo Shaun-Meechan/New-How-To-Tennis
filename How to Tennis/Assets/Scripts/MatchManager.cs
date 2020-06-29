@@ -1,13 +1,10 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using TMPro;
-using System;
-using System.Text.RegularExpressions;
 
 public class MatchManager : MonoBehaviour
 {
+	//Enum to store the current state of the game
 	public enum matchState
 	{
 		PlayerServe,
@@ -19,48 +16,75 @@ public class MatchManager : MonoBehaviour
 		Finished
 	}
 
+	//Variable storing the current state of the game
 	private matchState MatchState;
+	//Variable storing if the game has finished or not
 	private bool matchFinished = false;
+	//Variable to store the failed attempts to serve by the player
 	private int failedServes = 0;
+	//Variable to store the player's serving camera
 	public GameObject playerServeCamera;
+	//Variable to store the normal camera
 	public GameObject mainCamera;
+	//Variable storing the joystick
 	public GameObject joyStickObject;
+	//Variable storing the player's HUD, only visible during serves?
 	public Canvas playerHUDCanvas;
+	//Variable storing the ball
 	public NewBallController ball;
+	//Variable storing the player object
 	public GameObject human;
+	//Variable storing the AI
 	public AIController AI;
+	//Variable storing the player script
 	public PlayerMovement playerObject;
+	//Variable storing the ball's target sprite
 	public GameObject ballTargetSprite;
+	//Variables to store the scores
 	public short playerScore = 0;
 	public short AIScore = 0;
+	//Variables to store score texts and text shown at the end of a match
 	public TextMeshProUGUI playerScoreText;
 	public TextMeshProUGUI AIScoreText;
 	public TextMeshProUGUI endMatchText;
 	public TextMeshProUGUI creditsText;
+	//Varibles to store the canvas's used during gameplay
 	public Canvas scoreCanvas;
-	public Canvas endGameCanvas;
+	public GameObject endGameCanvas;
+	//Variable to store the audio manager
 	public AudioManager audioManager;
+	//Variable to store the player data
 	public Player player;
+	//Variable to store the skin loader
 	public SkinLoader skinLoader;
+
 	private void Start()
 	{
+		//Set the score text to defaults
 		updateScoreText();
+		//Start a couroutine to hide the canvas
 		StartCoroutine(hideScoreCanvas());
+		//Change our state to allow the player to serve
 		ChangeState(matchState.PlayerServe);
 
+		//Load the player data
 		PlayerData data = SaveSystem.LoadPlayer();
 		player.credits = data.credits;
 		Material tempSkin = skinLoader.getSkinMaterial(data.skinID);
+		//Set the players skin to their selected skin
 		playerObject.setSkin(tempSkin);
 	}
 
+	/// <summary>
+	/// Function that resets the match to allow another round to be player
+	/// </summary>
 	public void resetMatch()
 	{
 		//Reset the player and AI position
 		human.transform.position = new Vector3(0, 1, -32);
 		AI.transform.position = new Vector3(0, 1, 32);
 		AI.resetVelocity();
-		//Stop the ball from moving
+		//Stop the ball from moving or animating
 		ball.resetCounter();
 		ball.resetVelocity();
 		ball.setFirstServe(false);
@@ -84,6 +108,9 @@ public class MatchManager : MonoBehaviour
 		}
 	}
 
+	/// <summary>
+	/// Function to chnage the active camera
+	/// </summary>
 	private void ChangeCamera()
 	{
 		switch (MatchState)
@@ -92,7 +119,19 @@ public class MatchManager : MonoBehaviour
 				playerServeCamera.SetActive(true);
 				playerHUDCanvas.enabled = true;
 				mainCamera.SetActive(false);
-				//joyStickObject.SetActive(false);
+				joyStickObject.SetActive(false);
+				break;
+			case matchState.PlayerServed:
+				mainCamera.SetActive(true);
+				playerServeCamera.SetActive(false);
+				playerHUDCanvas.enabled = false;
+				joyStickObject.SetActive(true);
+				break;
+			case matchState.PlayerHit:
+				mainCamera.SetActive(true);
+				playerServeCamera.SetActive(false);
+				playerHUDCanvas.enabled = false;
+				joyStickObject.SetActive(true);
 				break;
 			case matchState.AIServe:
 				mainCamera.SetActive(true);
@@ -100,11 +139,22 @@ public class MatchManager : MonoBehaviour
 				playerHUDCanvas.enabled = false;
 				joyStickObject.SetActive(true);
 				break;
+			case matchState.AIServed:
+				mainCamera.SetActive(true);
+				playerServeCamera.SetActive(false);
+				playerHUDCanvas.enabled = false;
+				joyStickObject.SetActive(true);
+				break;
 			default:
+				Debug.LogError("ERROR: Unable to change camera as game is in the incorrect state. Should be PlayerServe or AIServe. It is currently" + MatchState);
 				break;
 		}
 	}
 
+	/// <summary>
+	/// Function to change the state of the match
+	/// </summary>
+	/// <param name="newState">State to change the match to</param>
 	public void ChangeState(matchState newState)
 	{
         if (playerScore == 6 || AIScore == 6)
@@ -121,44 +171,29 @@ public class MatchManager : MonoBehaviour
 			case matchState.PlayerServe:
 				ball.setServed(false);
 				ballTargetSprite.SetActive(false);
-				playerServeCamera.SetActive(true);
-				playerHUDCanvas.enabled = true;
-				mainCamera.SetActive(false);
-				joyStickObject.SetActive(false);
+				ChangeCamera();
 				break;		
 			case matchState.PlayerServed:
 				ball.setServed(false);
 				ballTargetSprite.SetActive(true);
 				AI.wake();
-				mainCamera.SetActive(true);
-				playerServeCamera.SetActive(false);
-				playerHUDCanvas.enabled = false;
-				joyStickObject.SetActive(true);
+				ChangeCamera();
 				break;
 			case matchState.AIServe:
 				ball.setServed(false);
 				ballTargetSprite.SetActive(false);
-				mainCamera.SetActive(true);
-				playerServeCamera.SetActive(false);
-				playerHUDCanvas.enabled = false;
-				joyStickObject.SetActive(true);
+				ChangeCamera();
 				break;
 			case matchState.AIServed:
 				ball.setServed(false);
 				ballTargetSprite.SetActive(true);
-				mainCamera.SetActive(true);
-				playerServeCamera.SetActive(false);
-				playerHUDCanvas.enabled = false;
-				joyStickObject.SetActive(true);
+				ChangeCamera();
 				break;
 			case matchState.PlayerHit:
 				ball.setServed(true);
 				ballTargetSprite.SetActive(true);
 				AI.wake();
-				mainCamera.SetActive(true);
-				playerServeCamera.SetActive(false);
-				playerHUDCanvas.enabled = false;
-				joyStickObject.SetActive(true);
+				ChangeCamera();
 				break;
 			case matchState.AIHit:
 				ball.setServed(true);
@@ -167,6 +202,7 @@ public class MatchManager : MonoBehaviour
 			case matchState.Finished:
 				audioManager.playApplause();
 				matchFinished = true;
+				endGameCanvas.SetActive(true);
 				ballTargetSprite.SetActive(false);
 				playerHUDCanvas.enabled = false;
 				joyStickObject.SetActive(false);
@@ -181,11 +217,18 @@ public class MatchManager : MonoBehaviour
 		}
 	}
 
+	/// <summary>
+	/// Function to return the current state of the match
+	/// </summary>
+	/// <returns></returns>
 	public matchState GetMatchState()
 	{
 		return MatchState;
 	}
 
+	/// <summary>
+	/// Function to increment the player's score by a value
+	/// </summary>
 	public void incrementPlayerScore(short value)
 	{
 		playerScore += value;
@@ -193,7 +236,6 @@ public class MatchManager : MonoBehaviour
 		{
 			//Player has more than 5 points, they won, end game
 			ChangeState(matchState.Finished);
-			endGameCanvas.enabled = true;
 			endMatchText.text = "You won!";
 		}
 		updateScoreText();
@@ -201,11 +243,17 @@ public class MatchManager : MonoBehaviour
 		resetMatch();
 	}
 
+	/// <summary>
+	/// Function to return the player's score
+	/// </summary>
 	public short getPlayerScore()
 	{
 		return playerScore;
 	}
 
+	/// <summary>
+	/// Function to increment the AI's score by a value
+	/// </summary>
 	public void incrementAIScore(short value)
 	{
 		AIScore += value;
@@ -213,13 +261,16 @@ public class MatchManager : MonoBehaviour
 		{
 			//AI has more than 5 points, they won, end game
 			ChangeState(matchState.Finished);
-			endGameCanvas.enabled = true;
 			endMatchText.text = "AI won!";
 		}
 		ChangeState(matchState.PlayerServe);
 		updateScoreText();
 		resetMatch();
 	}
+
+	/// <summary>
+	/// Returns the AI's score
+	/// </summary>
 	public short getAIScore()
 	{
 		return AIScore;
@@ -235,7 +286,9 @@ public class MatchManager : MonoBehaviour
 		showScoreCanvas();
 	}
 
-	//Function to show the score canvas
+	/// <summary>
+	/// Function to show the score canvas
+	/// </summary>
 	private void showScoreCanvas()
 	{
 		if (scoreCanvas.enabled == false)
@@ -249,18 +302,26 @@ public class MatchManager : MonoBehaviour
 		}
 	}
 
-	//Hide the canvas after a set amount of time has passed.
+	/// <summary>
+	///	Hide the canvas after a set amount of time has passed.
+	/// </summary>
 	IEnumerator hideScoreCanvas()
 	{
 		yield return new WaitForSeconds(3);
 		scoreCanvas.enabled = false;
 	}
 
+	/// <summary>
+	/// Coroutine to make a thread wait 1 second
+	/// </summary>
 	IEnumerator wait()
     {
 		yield return new WaitForSeconds(1);
     }
 
+	/// <summary>
+	/// Function to retrun a bool representing if the match is finished or not.
+	/// </summary>
 	public bool getMatchFinished()
     {
 		return matchFinished;
@@ -287,6 +348,9 @@ public class MatchManager : MonoBehaviour
         }
     }
 
+	/// <summary>
+	/// Function to tell the audio manager to play a random hit clip.
+	/// </summary>
 	public void playHitSound()
     {
 		audioManager.playRandomHitClip();

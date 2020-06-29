@@ -1,15 +1,19 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 
 public class MainMenu : MonoBehaviour
 {
+    //Variable to store our player
     public Player player;
+    //Variable to store our skin loader
     public SkinLoader skinLoader;
+    //Variable to store the credits text
     public TextMeshProUGUI creditsText;
+    //Array to store all the objects on the main menu
     public GameObject[] menuItems;
+    //Array to store all the objects in the store
     public GameObject[] storeItems;
+    //Variable to store the player data object.
     private PlayerData playerData;
     void Start()
     {
@@ -20,9 +24,8 @@ public class MainMenu : MonoBehaviour
         player.skin = skinLoader.getSkin(playerData.skinID);
         player.firstTime = playerData.firstTime;
         player.skinsOwnedIDs = new int[4];
-        //Setup the credits text
-
-        //If it is the players first time playing they will have no skins. No point in loading an array of 0's from disk.
+   
+        //If it is the players first time playing they will have no skins. No point in loading an array of 0's.
         if (player.firstTime == true)
         {
             player.firstTime = false;
@@ -38,6 +41,9 @@ public class MainMenu : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Function to swap the screen from the main menu to the store
+    /// </summary>
     public void showStore()
     {
         //Hide menu stuff
@@ -52,6 +58,9 @@ public class MainMenu : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Function to swap the screen from the store to the main menu
+    /// </summary>
     public void exitStore()
     {
         //Save data
