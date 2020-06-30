@@ -29,11 +29,14 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 1.0f;
     //Float to store animation speed
     private readonly float animationSpeed = 0.05f;
+    //Variable to store the rigidbody
+    private Rigidbody rb;
 
     private void Start()
     {
         //Vertical animation is used to change our Y position each frame. The value is based on 1.0 * our defined animation speed.
         verticalAnimation = 1.0f * animationSpeed;
+        rb = gameObject.GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -83,7 +86,11 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, transform.position.y - verticalAnimation, transform.position.z);
         }
+    }
 
+    public void resetVelocity()
+    {
+        rb.velocity = new Vector3(0, 0, 0);
     }
 
     /// <summary>

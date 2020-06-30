@@ -38,6 +38,8 @@ public class MatchManager : MonoBehaviour
 	public AIController AI;
 	//Variable storing the player script
 	public PlayerMovement playerObject;
+	//Variable to store the joystick
+	public Joystick joystick;
 	//Variable storing the ball's target sprite
 	public GameObject ballTargetSprite;
 	//Variables to store the scores
@@ -80,7 +82,9 @@ public class MatchManager : MonoBehaviour
 	/// </summary>
 	public void resetMatch()
 	{
-		//Reset the player and AI position
+		//Reset the player, joystick and AI position
+		joystick.resetHorizontalAndVerticalValue();
+		playerObject.resetVelocity();
 		human.transform.position = new Vector3(0, 1, -32);
 		AI.transform.position = new Vector3(0, 1, 32);
 		AI.resetVelocity();
