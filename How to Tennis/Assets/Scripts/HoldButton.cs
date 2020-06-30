@@ -37,7 +37,6 @@ public class HoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         if (pointerDownTimer < 0.45f)
         {
-            Debug.Log("Speed was less than 0.45, fail?");
             matchManager.incrementFailedServes();
         }
         else
