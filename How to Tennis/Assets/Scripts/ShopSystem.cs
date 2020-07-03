@@ -7,6 +7,26 @@ public class ShopSystem : MonoBehaviour
     public Player player;
     //Reference to the credits text
     public TextMeshProUGUI creditsText;
+    //Reference to the audio source component
+    private AudioSource audioSource;
+    //Reference to the purchase sfx
+    public AudioClip successfulPurcahseSFX;
+    //Reference to the info box script
+    public InfoBox infoBox;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+
+        if (audioSource == null)
+        {
+            Debug.LogError("ERROR: Unable to get audio source");
+        }
+        else
+        {
+            audioSource.clip = successfulPurcahseSFX;
+        }
+    }
 
     /// <summary>
     /// Function that attempts to purchase an item for the player
@@ -24,11 +44,13 @@ public class ShopSystem : MonoBehaviour
             creditsText.text = "Credits: " + player.credits;
             SaveSystem.SavePlayer(player);
             //Play a noise
+            audioSource.Play();
+            //Refresh the UI
+            infoBox.refreshData();
         }
         else
         {
             //Player can't afford the item. Don't allow purchase
-            //Play a noise and show an icon or something
         }
     }
 }

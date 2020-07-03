@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skinName: Cyclops Skin
   cost: 100
-  description: Cyclops Skin Description
+  description: You'd think with only one eye a cyclops wouldn't be very good at tennis.
+    Turns out they are as good as anyone else.
   ID: 2
   skin: {fileID: 2100000, guid: 37356d42ee2f5b04199f878c2a5a5d1b, type: 2}

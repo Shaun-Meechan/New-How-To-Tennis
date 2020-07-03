@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skinName: Tribal
   cost: 100
-  description: Tribal Desctiption
+  description: From an ancient  tribe that apparently invented tennis. Guess that
+    makes them pretty good at it.
   ID: 1
   skin: {fileID: 2100000, guid: ef427b082402adf4db76061e1dcefb24, type: 2}

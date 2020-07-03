@@ -57,4 +57,12 @@ public class InfoBox : MonoBehaviour
             buyButton.SetActive(true);
         }
     }
+
+    /// <summary>
+    /// Function to be used after the player purchases an item
+    /// </summary>
+    public void refreshData()
+    {
+        setupData();
+    }
 }

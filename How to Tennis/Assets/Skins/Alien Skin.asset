@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skinName: Alien Skin
   cost: 100
-  description: Alien Skin Desctiption
+  description: No one knows where this mysterious player came from. Rumor has it
+    they were so good at tennis on their home planet they were banished and found
+    their way here.
   ID: 3
   skin: {fileID: 2100000, guid: 220c71ef0538a594ba0e0059b3d84d91, type: 2}

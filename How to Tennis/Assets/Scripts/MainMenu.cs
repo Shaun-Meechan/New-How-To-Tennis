@@ -59,6 +59,30 @@ public class MainMenu : MonoBehaviour
     }
 
     /// <summary>
+    /// Sets all objcts in the array 'menuItems'.setActive to false 
+    /// </summary>
+    public void hideMainMenu()
+    {
+        //Hide menu stuff
+        for (int i = 0; i < menuItems.Length; i++)
+        {
+            menuItems[i].SetActive(false);
+        }
+    }
+
+    /// <summary>
+    /// Sets all objcts in the array 'menuItems'.setActive to true 
+    /// </summary>
+    public void showMainMenu()
+    {
+        //Hide menu stuff
+        for (int i = 0; i < menuItems.Length; i++)
+        {
+            menuItems[i].SetActive(true);
+        }
+    }
+
+    /// <summary>
     /// Function to swap the screen from the store to the main menu
     /// </summary>
     public void exitStore()
