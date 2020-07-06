@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -27,6 +26,10 @@ public class AIController : MonoBehaviour
     //Bools for controlling our "animation"
     private bool animUp = false;
     private bool animDown = false;
+    //Vector to resume movement of the AI after a pause
+    Vector3 directionVector = new Vector3(0,0,0);
+    //Bool to store whether the AI can move or not
+    private bool canMove = true;
 
     private void Start()
     {
@@ -76,12 +79,14 @@ public class AIController : MonoBehaviour
         //If we have collided with the ball target or our own target we want to stop.
         if (other.gameObject.name == "BallTarget")
         {
-            rb.velocity = new Vector3(0,0,0);
+            resetVelocity();
+            canMove = false;
         }
 
         if (other.gameObject.name == "AI Target")
         {
             resetVelocity();
+            canMove = false;
         }
     }
 
@@ -97,6 +102,7 @@ public class AIController : MonoBehaviour
         }
         else
         {
+            canMove = true;
             //Find out if we should go for the ball or not.
             int randomNumber = Random.Range(0, 2);
 
@@ -105,7 +111,7 @@ public class AIController : MonoBehaviour
             {
                 ballPosition = ball.getEndPoint();
                 //Create a direction vector from the balls end point to us, this is used later to move us.
-                Vector3 directionVector = new Vector3(ballPosition.x - transform.position.x, 0, ballPosition.z - transform.position.z);
+                directionVector = new Vector3(ballPosition.x - transform.position.x, 0, ballPosition.z - transform.position.z);
 
                 if (directionVector.x < 0 )
                 {
@@ -124,6 +130,7 @@ public class AIController : MonoBehaviour
             }
             else
             {
+                canMove = true;
                 //If we don't want to get the ball we want to go somewhere random on the court.
                 //So we get two random numbers between the min and max points we can go
                 int randomX = Random.Range(-20, 20);
@@ -134,7 +141,7 @@ public class AIController : MonoBehaviour
                 targetObject.transform.position = new Vector3(randomX, 0, randomZ);
 
                 //Create a direction vector between the point and us
-                Vector3 directionVector = new Vector3(randomX - transform.position.x, 0, randomZ - transform.position.z);
+                directionVector = new Vector3(randomX - transform.position.x, 0, randomZ - transform.position.z);
 
                 //Use the vector to push towards the point.
                 rb.AddForce(directionVector * power, ForceMode.Impulse);
@@ -151,6 +158,15 @@ public class AIController : MonoBehaviour
         rb.velocity = new Vector3(0,0,0);
     }
 
+    /// <summary>
+    /// Function to set the AI to it's default state
+    /// </summary>
+    public void reset()
+    {
+        resetVelocity();
+        directionVector = new Vector3(0, 0, 0);
+        this.transform.position = new Vector3(0, 1, 32);
+    }
     /// <summary>
     /// Function to handle the AI serving the ball
     /// </summary>
@@ -296,6 +312,29 @@ public class AIController : MonoBehaviour
     }
 
     /// <summary>
+    /// Function to tell the AI the game has paused and should stop moving
+    /// </summary>
+    public void gamePaused()
+    {
+        resetVelocity();
+    }
+
+    /// <summary>
+    /// Function to tell the AI the game is not paused anymore
+    /// </summary>
+    public void gameUnPaused()
+    {
+        if (canMove == true)
+        {
+            rb.AddForce(directionVector * power, ForceMode.Impulse);
+        }
+        else
+        {
+            return;
+        }
+    }
+
+    /// <summary>
     /// Coroutine to make our reset animation play correctly.
     /// </summary>
     IEnumerator resetReturnAnimation()
@@ -303,5 +342,4 @@ public class AIController : MonoBehaviour
         yield return new WaitForSeconds(1);
         animateRacket("Returned");
     }
-
 }

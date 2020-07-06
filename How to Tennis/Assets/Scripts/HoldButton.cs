@@ -28,7 +28,7 @@ public class HoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     /// </summary>
     public void OnPointerDown(PointerEventData eventData)
     {
-        if (acceptInput == false)
+        if (acceptInput == false || matchManager.getPaused() == true)
         {
             return;
         }
@@ -44,7 +44,7 @@ public class HoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     /// </summary>
     public void OnPointerUp(PointerEventData eventData)
     {
-        if (acceptInput == false)
+        if (acceptInput == false || matchManager.getPaused() == true)
         {
             return;
         }
@@ -66,7 +66,7 @@ public class HoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
     private void Update()
     {
-        if (acceptInput == false)
+        if (acceptInput == false || matchManager.getPaused() == true)
         {
             return;
         }

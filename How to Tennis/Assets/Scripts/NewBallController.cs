@@ -49,6 +49,10 @@ public class NewBallController : MonoBehaviour
 
     private void Update()
     {
+        if (matchManager.getPaused() == true)
+        {
+            return;
+        }
         //If it is the first serve then the ball needs to do a bounce for it to be legal
         if (firstServe == true)
         {

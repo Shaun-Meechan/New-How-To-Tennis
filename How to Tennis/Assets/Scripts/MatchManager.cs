@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
 using TMPro;
-using UnityEngine.VR;
 
 public class MatchManager : MonoBehaviour
 {
@@ -60,8 +59,11 @@ public class MatchManager : MonoBehaviour
 	public Player player;
 	//Variable to store the skin loader
 	public SkinLoader skinLoader;
-	//Varriable to store the pause menu
+	//Variable to store the pause menu
 	public GameObject pauseMenu;
+	//Variable to store if the game is paused
+	public bool paused = false;
+
 
 	private void Start()
 	{
@@ -86,12 +88,13 @@ public class MatchManager : MonoBehaviour
 
     private void Update()
     {
-        if (Application.platform == RuntimePlatform.Android)
+        if (Application.platform == RuntimePlatform.Android || Application.platform == RuntimePlatform.WindowsEditor)
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
 				//Player pressed the back button. Show the pause menu
 				pauseMenu.SetActive(true);
+				setPaused(true);
             }
         }
     }
@@ -105,8 +108,7 @@ public class MatchManager : MonoBehaviour
 		joystick.resetHorizontalAndVerticalValue();
 		playerObject.resetVelocity();
 		human.transform.position = new Vector3(0, 1, -32);
-		AI.transform.position = new Vector3(0, 1, 32);
-		AI.resetVelocity();
+		AI.reset();
 		//Stop the ball from moving or animating
 		ball.resetCounter();
 		ball.resetVelocity();
@@ -377,5 +379,32 @@ public class MatchManager : MonoBehaviour
 	public void playHitSound()
     {
 		audioManager.playRandomHitClip();
+    }
+
+	/// <summary>
+	/// Function to set if the game is paused or not
+	/// </summary>
+	public void setPaused(bool value)
+    {
+		paused = value;
+
+        if (paused == true)
+        {
+			//Tell objects the game is paused
+			AI.gamePaused();
+        }
+        else
+        {
+			//Tell objects the game is not paused
+			AI.gameUnPaused();
+        }
+    }
+
+	/// <summary>
+	/// Returns the value of paused
+	/// </summary>
+	public bool getPaused()
+    {
+		return paused;
     }
 }
