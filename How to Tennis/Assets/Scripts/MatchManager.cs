@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 using TMPro;
+using UnityEngine.VR;
 
 public class MatchManager : MonoBehaviour
 {
@@ -59,6 +60,8 @@ public class MatchManager : MonoBehaviour
 	public Player player;
 	//Variable to store the skin loader
 	public SkinLoader skinLoader;
+	//Varriable to store the pause menu
+	public GameObject pauseMenu;
 
 	private void Start()
 	{
@@ -78,9 +81,25 @@ public class MatchManager : MonoBehaviour
 	}
 
 	/// <summary>
-	/// Function that resets the match to allow another round to be player
+	/// Update will check for user input.
 	/// </summary>
-	public void resetMatch()
+
+    private void Update()
+    {
+        if (Application.platform == RuntimePlatform.Android)
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+				//Player pressed the back button. Show the pause menu
+				pauseMenu.SetActive(true);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Function that resets the match to allow another round to be player
+    /// </summary>
+    public void resetMatch()
 	{
 		//Reset the player, joystick and AI position
 		joystick.resetHorizontalAndVerticalValue();

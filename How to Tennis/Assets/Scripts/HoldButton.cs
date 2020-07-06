@@ -20,14 +20,23 @@ public class HoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     private float maxHoldTime = 1.0f;
     //Variable to store the power bar
     public Image fillImage;
+    //Bool to find out if we should accept input
+    public bool acceptInput = false;
 
     /// <summary>
     /// Function called when the player first clicks the cursor down
     /// </summary>
     public void OnPointerDown(PointerEventData eventData)
     {
-        pointerDown = true;
-        playerMovement.animateRacket("PrepareToServe");
+        if (acceptInput == false)
+        {
+            return;
+        }
+        else
+        {
+            pointerDown = true;
+            playerMovement.animateRacket("PrepareToServe");
+        }
     }
 
     /// <summary>
@@ -35,31 +44,46 @@ public class HoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     /// </summary>
     public void OnPointerUp(PointerEventData eventData)
     {
-        if (pointerDownTimer < 0.45f)
+        if (acceptInput == false)
         {
-            matchManager.incrementFailedServes();
+            return;
         }
         else
         {
-            ball.setCountIncreaseSpeed(pointerDownTimer);
-            playerMovement.DoFirstServe();
-            playerMovement.animateRacket("Serve");
+            if (pointerDownTimer < 0.45f)
+            {
+                matchManager.incrementFailedServes();
+            }
+            else
+            {
+                ball.setCountIncreaseSpeed(pointerDownTimer);
+                playerMovement.DoFirstServe();
+                playerMovement.animateRacket("Serve");
+            }
+            Reset();
         }
-        Reset();
     }
 
     private void Update()
     {
-        //If the pointer is down increment the time variable
-        if (pointerDown)
+        if (acceptInput == false)
         {
-            pointerDownTimer += Time.deltaTime;
-            //If the cursor has been down for longer than the max time then stop and reset.
-            if (pointerDownTimer >= maxHoldTime)
+            return;
+        }
+        else
+        {
+            //If the pointer is down increment the time variable
+            if (pointerDown)
             {
-                Reset();
+                pointerDownTimer += Time.deltaTime;
+                //If the cursor has been down for longer than the max time then stop and reset.
+                if (pointerDownTimer >= maxHoldTime)
+                {
+                    Reset();
+                }
+                fillImage.fillAmount = pointerDownTimer / maxHoldTime;
             }
-            fillImage.fillAmount = pointerDownTimer / maxHoldTime;
+
         }
     }
 
@@ -71,5 +95,14 @@ public class HoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         pointerDown = false;
         pointerDownTimer = 0;
         fillImage.fillAmount = 0;
+    }
+
+    /// <summary>
+    /// Function to change the value of acceptInput
+    /// </summary>
+    /// <param name="value"></param>
+    public void setAcceptInput(bool value)
+    {
+        acceptInput = value;
     }
 }
