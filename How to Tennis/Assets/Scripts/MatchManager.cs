@@ -63,10 +63,14 @@ public class MatchManager : MonoBehaviour
 	public GameObject pauseMenu;
 	//Variable to store if the game is paused
 	public bool paused = false;
+	//Variable to store the version text, used in the pause menu
+	public TextMeshProUGUI versionText;
 
 
 	private void Start()
 	{
+		//Setup the version text
+		versionText.text = "Version: " + Application.version;
 		//Set the score text to defaults
 		updateScoreText();
 		//Start a couroutine to hide the canvas

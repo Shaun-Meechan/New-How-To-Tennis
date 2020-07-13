@@ -29,14 +29,16 @@ public class LevelLoader : MonoBehaviour
     /// </summary>
     IEnumerator LoadAsynchronously(int sceneIndex)
     {
+        float progress = 0.0f;
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
 
         LoadingScreen.SetActive(true);
 
         while (!operation.isDone)
         {
-            float progress = Mathf.Clamp01(operation.progress / .9f);
+            progress = Mathf.Clamp01(operation.progress / .9f);
             slider.value = progress;
+            progress = Mathf.Round(progress);
             percentageText.text = progress * 100f + "%";
             yield return null;
         }

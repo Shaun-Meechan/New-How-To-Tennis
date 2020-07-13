@@ -12,6 +12,8 @@ public class Player : MonoBehaviour
     public SkinObject skin;
     //Variable to represent if this is the player's first time playing the game
     public bool firstTime = true;
+    //Variable to store if the user want audio muted
+    public bool playAudio = true;
 
     /// <summary>
     /// Function to add a new skin to the player owned skins
@@ -45,5 +47,20 @@ public class Player : MonoBehaviour
         {
             skinsOwnedIDs[i] = 0;
         }
+    }
+    /// <summary>
+    /// Function to set the value of playAudio.
+    /// </summary>
+    public void setPlayAudio(bool value)
+    {
+        playAudio = value;
+    }
+
+    /// <summary>
+    /// Returns the value of playAudio.
+    /// </summary>
+    public bool getPlayAudio()
+    {
+        return playAudio;
     }
 }

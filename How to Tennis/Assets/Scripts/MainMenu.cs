@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
@@ -15,8 +16,17 @@ public class MainMenu : MonoBehaviour
     public GameObject[] storeItems;
     //Variable to store the player data object.
     private PlayerData playerData;
+    //Variable to store our version text object
+    public TextMeshProUGUI versionText;
+    //Variables for the audio button
+    public Image audioButton;
+    public Sprite audioPlayingSprite;
+    public Sprite audioMutedSprite;
+    public AudioToggle audioToggle;
     void Start()
     {
+        //Setup the version text
+        versionText.text = "Version: " + Application.version;
         //Load the player data and setup the player
         playerData = SaveSystem.LoadPlayer();
         player.credits = playerData.credits;
@@ -24,7 +34,7 @@ public class MainMenu : MonoBehaviour
         player.skin = skinLoader.getSkin(playerData.skinID);
         player.firstTime = playerData.firstTime;
         player.skinsOwnedIDs = new int[4];
-   
+        player.playAudio = playerData.playAudio;
         //If it is the players first time playing they will have no skins. No point in loading an array of 0's.
         if (player.firstTime == true)
         {
@@ -38,6 +48,20 @@ public class MainMenu : MonoBehaviour
             {
                 player.skinsOwnedIDs[i] = playerData.skinsOwnedIDs[i];
             }
+        }
+
+        //Set the audio button to the correct value
+        if (player.getPlayAudio() == true)
+        {
+            //Show playing audio icon
+            audioButton.sprite = audioPlayingSprite;
+            audioToggle.playAudio();
+        }
+        else
+        {
+            //Show muted audio icon
+            audioButton.sprite = audioMutedSprite;
+            audioToggle.muteAudio();
         }
     }
 

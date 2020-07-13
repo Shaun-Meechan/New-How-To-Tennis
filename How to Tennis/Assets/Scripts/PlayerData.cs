@@ -12,16 +12,18 @@ public class PlayerData
     public int[] skinsOwnedIDs;
     //Variable to store if this is the player's first time playing the game
     public bool firstTime;
+    //Variable to store if the user want audio muted
+    public bool playAudio;
 
     /// <summary>
     /// Constructor for player data
     /// </summary>
-    /// <param name="player"></param>
     public PlayerData (Player player)
     {
         credits = player.credits;
         skinID = player.skin.ID;
         skinsOwnedIDs = player.skinsOwnedIDs;
         firstTime = player.firstTime;
+        playAudio = player.playAudio;
     }
 }
