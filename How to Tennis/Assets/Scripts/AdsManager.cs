@@ -23,6 +23,8 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
     public Button adButton;
     //Get a reference to our error message object
     public GameObject errorMessageObject;
+    //Bool to see if we should show an ad
+    private bool allowAd = true;
 
     void Start()
     {
@@ -56,6 +58,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
             SaveSystem.SavePlayer(player);
             creditsText.text = "You have " + player.credits + " credits";
             adButton.interactable = false;
+            allowAd = false;
             Debug.Log("Finished showing ad");
         }
         //If the ad failed don't reward the player and show an error message.
@@ -74,7 +77,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
     public void OnUnityAdsReady(string placementId)
     {
         //If the ready placement is ready allow the user to press the button.
-        if (placementId == myplacementID)
+        if (placementId == myplacementID && allowAd == true)
         {
             adButton.interactable = true;
         }

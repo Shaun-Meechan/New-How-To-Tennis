@@ -21,7 +21,7 @@ public class PlayerData
     public PlayerData (Player player)
     {
         credits = player.credits;
-        skinID = player.skin.ID;
+        skinID = player.skinID;
         skinsOwnedIDs = player.skinsOwnedIDs;
         firstTime = player.firstTime;
         playAudio = player.playAudio;

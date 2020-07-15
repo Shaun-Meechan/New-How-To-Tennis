@@ -157,15 +157,14 @@ QualitySettings:
     customRenderPipeline: {fileID: 11400000, guid: a31e9f9f9c9d4b9429ed0d1234e22103,
       type: 2}
     excludedTargetPlatforms:
-    - Standalone
     - WebGL
   m_PerPlatformDefaultQuality:
-    Android: 1
+    Android: 3
     Lumin: 2
     Nintendo Switch: 2
     PS4: 2
     Stadia: 2
-    Standalone: 2
+    Standalone: 3
     WebGL: 1
     Windows Store Apps: 2
     XboxOne: 2

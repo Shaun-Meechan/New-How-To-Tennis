@@ -25,43 +25,53 @@ public class MainMenu : MonoBehaviour
     public AudioToggle audioToggle;
     void Start()
     {
-        //Setup the version text
-        versionText.text = "Version: " + Application.version;
-        //Load the player data and setup the player
-        playerData = SaveSystem.LoadPlayer();
-        player.credits = playerData.credits;
-        creditsText.text = "Credits: " + player.credits;
-        player.skin = skinLoader.getSkin(playerData.skinID);
-        player.firstTime = playerData.firstTime;
-        player.skinsOwnedIDs = new int[4];
-        player.playAudio = playerData.playAudio;
-        //If it is the players first time playing they will have no skins. No point in loading an array of 0's.
-        if (player.firstTime == true)
+        Application.targetFrameRate = 60;
+        //Check to see if a save file exists
+        if (SaveSystem.DoesFileExist() == false)
         {
-            player.firstTime = false;
             SaveSystem.SavePlayer(player);
+            Start();
         }
         else
         {
-            //Load player skins IDs
-            for (int i = 0; i < 4; i++)
+            //Setup the version text
+            versionText.text = "Version: " + Application.version;
+            //Load the player data and setup the player
+            playerData = SaveSystem.LoadPlayer();
+            player.credits = playerData.credits;
+            creditsText.text = "Credits: " + player.credits;
+            player.skin = skinLoader.getSkin(playerData.skinID);
+            player.firstTime = playerData.firstTime;
+            player.skinsOwnedIDs = new int[4];
+            player.playAudio = playerData.playAudio;
+            //If it is the players first time playing they will have no skins. No point in loading an array of 0's.
+            if (player.firstTime == true)
             {
-                player.skinsOwnedIDs[i] = playerData.skinsOwnedIDs[i];
+                player.firstTime = false;
+                SaveSystem.SavePlayer(player);
             }
-        }
+            else
+            {
+                //Load player skins IDs
+                for (int i = 0; i < 4; i++)
+                {
+                    player.skinsOwnedIDs[i] = playerData.skinsOwnedIDs[i];
+                }
+            }
 
-        //Set the audio button to the correct value
-        if (player.getPlayAudio() == true)
-        {
-            //Show playing audio icon
-            audioButton.sprite = audioPlayingSprite;
-            audioToggle.playAudio();
-        }
-        else
-        {
-            //Show muted audio icon
-            audioButton.sprite = audioMutedSprite;
-            audioToggle.muteAudio();
+            //Set the audio button to the correct value
+            if (player.getPlayAudio() == true)
+            {
+                //Show playing audio icon
+                audioButton.sprite = audioPlayingSprite;
+                audioToggle.playAudio();
+            }
+            else
+            {
+                //Show muted audio icon
+                audioButton.sprite = audioMutedSprite;
+                audioToggle.muteAudio();
+            }
         }
     }
 

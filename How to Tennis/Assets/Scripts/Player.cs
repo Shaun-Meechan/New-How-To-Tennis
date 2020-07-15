@@ -8,7 +8,9 @@ public class Player : MonoBehaviour
     public int credits = 0;
     //Array to store what skins the player has in a Serializable format
     public int[] skinsOwnedIDs;
-    //Variable storing the current skin being used
+    //Variable storing the current ID of the skin being used
+    public int skinID = 0;
+    //Variable storing the current skin
     public SkinObject skin;
     //Variable to represent if this is the player's first time playing the game
     public bool firstTime = true;
