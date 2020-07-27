@@ -30,7 +30,6 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
     {
         //Make sure the button can't be interacted with until there is an ad to show.
         adButton.interactable = Advertisement.IsReady(myplacementID);
-
         //Create a listener for the ads service and initialise the service.
         Advertisement.AddListener(this);
         Advertisement.Initialize(gameID, true);

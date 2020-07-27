@@ -267,7 +267,10 @@ public class MatchManager : MonoBehaviour
 			ChangeState(matchState.Finished);
 			endMatchText.text = "You won!";
 		}
-		updateScoreText();
+        if (playerScore < 5)
+        {
+			updateScoreText();
+        }
 		ChangeState(matchState.AIServe);
 		resetMatch();
 	}
@@ -292,8 +295,11 @@ public class MatchManager : MonoBehaviour
 			ChangeState(matchState.Finished);
 			endMatchText.text = "AI won!";
 		}
+        if (AIScore < 5)
+        {
+			updateScoreText();
+        }
 		ChangeState(matchState.PlayerServe);
-		updateScoreText();
 		resetMatch();
 	}
 
