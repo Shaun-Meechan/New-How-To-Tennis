@@ -56,7 +56,7 @@ public class MatchManager : MonoBehaviour
 	//Variable to store the audio manager
 	public AudioManager audioManager;
 	//Variable to store the player data
-	public Player player;
+	private Player player;
 	//Variable to store the skin loader
 	public SkinLoader skinLoader;
 	//Variable to store the pause menu
@@ -78,10 +78,9 @@ public class MatchManager : MonoBehaviour
 		//Change our state to allow the player to serve
 		ChangeState(matchState.PlayerServe);
 
-		//Load the player data
-		PlayerData data = SaveSystem.LoadPlayer();
-		player.credits = data.credits;
-		Material tempSkin = skinLoader.getSkinMaterial(data.skinID);
+		player = (Player)FindObjectOfType(typeof(Player));
+
+		Material tempSkin = skinLoader.getSkinMaterial(player.skinID);
 		//Set the players skin to their selected skin
 		playerObject.setSkin(tempSkin);
 	}
@@ -238,7 +237,7 @@ public class MatchManager : MonoBehaviour
 				ball.gameObject.SetActive(false);
 				player.credits += 5;
 				SaveSystem.SavePlayer(player);
-				creditsText.text = "You have " + player.credits + " credits.";
+				creditsText.text = "Watch an Ad for 10 Credits. You currently have " + player.credits + " credits.";
 				break;
 			default:
 				Debug.LogError("ERROR: State was changed to an invalid state.");
@@ -267,7 +266,7 @@ public class MatchManager : MonoBehaviour
 			ChangeState(matchState.Finished);
 			endMatchText.text = "You won!";
 		}
-        if (playerScore < 5)
+        if (playerScore < 6)
         {
 			updateScoreText();
         }
@@ -295,7 +294,7 @@ public class MatchManager : MonoBehaviour
 			ChangeState(matchState.Finished);
 			endMatchText.text = "AI won!";
 		}
-        if (AIScore < 5)
+        if (AIScore < 6)
         {
 			updateScoreText();
         }

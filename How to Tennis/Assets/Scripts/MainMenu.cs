@@ -40,11 +40,12 @@ public class MainMenu : MonoBehaviour
             playerData = SaveSystem.LoadPlayer();
             player.credits = playerData.credits;
             creditsText.text = "Credits: " + player.credits;
+            player.skinID = playerData.skinID;
             player.skin = skinLoader.getSkin(playerData.skinID);
             player.firstTime = playerData.firstTime;
-            player.skinsOwnedIDs = new int[4];
+            player.skinsOwnedIDs = new int[6];
             player.playAudio = playerData.playAudio;
-            //If it is the players first time playing they will have no skins. No point in loading an array of 0's.
+
             if (player.firstTime == true)
             {
                 player.firstTime = false;

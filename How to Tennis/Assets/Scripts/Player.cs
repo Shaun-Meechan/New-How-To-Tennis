@@ -1,5 +1,5 @@
 ﻿//Script from https://www.youtube.com/watch?v=XOjd_qU2Ido
-//Modified by Shaun Meechan to include relevan project data.
+//Modified by Shaun Meechan to include relevant project data.
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -17,13 +17,18 @@ public class Player : MonoBehaviour
     //Variable to store if the user want audio muted
     public bool playAudio = true;
 
+    private void Start()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
+
     /// <summary>
     /// Function to add a new skin to the player owned skins
     /// </summary>
     public void addSkin(int ID)
     {
         Debug.Log("Adding a skin to array");
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 6; i++)
         {
             if (i == 0)
             {

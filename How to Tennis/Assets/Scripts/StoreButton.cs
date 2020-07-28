@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿//This script is never used???
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

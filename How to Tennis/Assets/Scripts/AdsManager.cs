@@ -16,7 +16,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
     //myPlacementID should be equal to the type of ad we want to show.
     private string myplacementID = "rewardedVideo";
     //Get a reference to our player to give them credits.
-    public Player player;
+    private Player player;
     //Get a reference to our credits text so we can update it.
     public TextMeshProUGUI creditsText;
     //Get a reference to our button so we know when to show an ad.
@@ -28,6 +28,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
 
     void Start()
     {
+        player = (Player)FindObjectOfType(typeof(Player));
         //Make sure the button can't be interacted with until there is an ad to show.
         adButton.interactable = Advertisement.IsReady(myplacementID);
         //Create a listener for the ads service and initialise the service.
@@ -58,7 +59,6 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
             creditsText.text = "You have " + player.credits + " credits";
             adButton.interactable = false;
             allowAd = false;
-            Debug.Log("Finished showing ad");
         }
         //If the ad failed don't reward the player and show an error message.
         else if (showResult == ShowResult.Failed)

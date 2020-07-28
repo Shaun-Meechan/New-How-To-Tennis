@@ -16,8 +16,6 @@ public class PlayerMovement : MonoBehaviour
     //Variables to store the rackets
     public GameObject RacketLeft;
     public GameObject RacketRight;
-    //Variable to store the skin loader
-    public SkinLoader skinLoader;
     //Variables to store movement data
     float horizontalMove = 0.0f;
     float verticalMove = 0.0f;

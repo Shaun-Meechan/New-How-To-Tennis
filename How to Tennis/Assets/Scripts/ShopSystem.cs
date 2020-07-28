@@ -38,6 +38,7 @@ public class ShopSystem : MonoBehaviour
         {
             //Player can afford the item. Allow purchase
             player.skin = item;
+            player.skinID = item.ID;
             player.addSkin(item.ID);
             player.credits -= cost;
             //Update the credits text

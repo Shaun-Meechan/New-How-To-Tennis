@@ -14,8 +14,12 @@ public class InfoBox : MonoBehaviour
     public GameObject buyButton;
     //Variable to store the buy button script
     public BuyButton buyButtonScript;
+    //Variable to store the select button script
+    public StoreSelect storeSelect;
     //Variable to store the select button
     public GameObject selectButton;
+    //Variable to the skin loader object so we know how many skins exist
+    public SkinLoader skinLoader;
 
     /// <summary>
     /// Function to set our local skin object to a skin that has been passed in
@@ -24,6 +28,7 @@ public class InfoBox : MonoBehaviour
     {
         skinObject = newSkinObject;
         buyButtonScript.linkedSkin = newSkinObject;
+        storeSelect.linkedSkin = newSkinObject;
         setupData();
     }
 
@@ -37,7 +42,7 @@ public class InfoBox : MonoBehaviour
         costText.text = "Price: " + skinObject.cost;
 
         //make sure i is less than the total number of skins
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < skinLoader.skins.Length; i++)
         {
             if (player.skinsOwnedIDs[i] == skinObject.ID)
             {
