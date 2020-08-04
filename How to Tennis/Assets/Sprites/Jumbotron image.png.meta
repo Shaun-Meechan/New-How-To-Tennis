@@ -1,0 +1,3548 @@
+fileFormatVersion: 2
+guid: 0c56eed72370c4f4ca947ad6fb44abc5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 285799923431648842
+    second: Jumbotron image(1)_0
+  - first:
+      213: 3455731623911128972
+    second: Jumbotron image(1)_1
+  - first:
+      213: 6119010296772870640
+    second: Jumbotron image(1)_2
+  - first:
+      213: -4086843487788193107
+    second: Jumbotron image(1)_3
+  - first:
+      213: -688401098196254939
+    second: Jumbotron image(1)_4
+  - first:
+      213: 5883168401163555655
+    second: Jumbotron image(1)_5
+  - first:
+      213: 4422234394079305224
+    second: Jumbotron image(1)_6
+  - first:
+      213: -6833803383127335961
+    second: Jumbotron image(1)_7
+  - first:
+      213: -4226794190098018958
+    second: Jumbotron image(1)_8
+  - first:
+      213: 1009810070342841021
+    second: Jumbotron image(1)_9
+  - first:
+      213: 5561921986412495493
+    second: Jumbotron image(1)_10
+  - first:
+      213: 2832706761940786028
+    second: Jumbotron image(1)_11
+  - first:
+      213: -3784055590625177957
+    second: Jumbotron image(1)_12
+  - first:
+      213: 952461070889711214
+    second: Jumbotron image(1)_13
+  - first:
+      213: -4960657027717377149
+    second: Jumbotron image(1)_14
+  - first:
+      213: -3357607087501307156
+    second: Jumbotron image(1)_15
+  - first:
+      213: -879124020997721133
+    second: Jumbotron image(1)_16
+  - first:
+      213: -6735040587328889812
+    second: Jumbotron image(1)_17
+  - first:
+      213: -7630155974669186758
+    second: Jumbotron image(1)_18
+  - first:
+      213: 1236087764448404989
+    second: Jumbotron image(1)_19
+  - first:
+      213: 6542648256062676065
+    second: Jumbotron image(1)_20
+  - first:
+      213: -1087539794166820241
+    second: Jumbotron image(1)_21
+  - first:
+      213: 7652743587795786004
+    second: Jumbotron image(1)_22
+  - first:
+      213: 1920423987294877628
+    second: Jumbotron image(1)_23
+  - first:
+      213: -7919027762650135334
+    second: Jumbotron image(1)_24
+  - first:
+      213: 2740111882997072255
+    second: Jumbotron image(1)_25
+  - first:
+      213: -5179159216723091275
+    second: Jumbotron image(1)_26
+  - first:
+      213: -9179865891080160308
+    second: Jumbotron image(1)_27
+  - first:
+      213: -1756328975618992962
+    second: Jumbotron image(1)_28
+  - first:
+      213: -8929768380378519780
+    second: Jumbotron image(1)_29
+  - first:
+      213: -208655512630143742
+    second: Jumbotron image(1)_30
+  - first:
+      213: -4498554681468330704
+    second: Jumbotron image(1)_31
+  - first:
+      213: 8095030173244494332
+    second: Jumbotron image(1)_32
+  - first:
+      213: 1227107906139002204
+    second: Jumbotron image(1)_33
+  - first:
+      213: -1115453895990970499
+    second: Jumbotron image(1)_34
+  - first:
+      213: -4570351735266155892
+    second: Jumbotron image(1)_35
+  - first:
+      213: -6193532071137837063
+    second: Jumbotron image(1)_36
+  - first:
+      213: -2858090252652595650
+    second: Jumbotron image(1)_37
+  - first:
+      213: 5668929558524024836
+    second: Jumbotron image(1)_38
+  - first:
+      213: -9101259828751278025
+    second: Jumbotron image(1)_39
+  - first:
+      213: 5220544591501945522
+    second: Jumbotron image(1)_40
+  - first:
+      213: 6190468067091314057
+    second: Jumbotron image(1)_41
+  - first:
+      213: -4650987993405977781
+    second: Jumbotron image(1)_42
+  - first:
+      213: 6035070922278627124
+    second: Jumbotron image(1)_43
+  - first:
+      213: 3966291100574030231
+    second: Jumbotron image(1)_44
+  - first:
+      213: 6333306968117984127
+    second: Jumbotron image(1)_45
+  - first:
+      213: 2451932523358773224
+    second: Jumbotron image(1)_46
+  - first:
+      213: 3840109123186554265
+    second: Jumbotron image(1)_47
+  - first:
+      213: 631438477389441769
+    second: Jumbotron image(1)_48
+  - first:
+      213: 4513273167333674276
+    second: Jumbotron image(1)_49
+  - first:
+      213: -2110259270241531932
+    second: Jumbotron image(1)_50
+  - first:
+      213: -7286649143620536576
+    second: Jumbotron image(1)_51
+  - first:
+      213: -3568561477173437500
+    second: Jumbotron image(1)_52
+  - first:
+      213: 3333329332303565275
+    second: Jumbotron image(1)_53
+  - first:
+      213: -8861022302814116738
+    second: Jumbotron image(1)_54
+  - first:
+      213: 3547059076505226232
+    second: Jumbotron image(1)_55
+  - first:
+      213: -3122963087860558462
+    second: Jumbotron image(1)_56
+  - first:
+      213: 7504970484650932922
+    second: Jumbotron image(1)_57
+  - first:
+      213: 3890697256732127442
+    second: Jumbotron image(1)_58
+  - first:
+      213: -7878611072751339424
+    second: Jumbotron image(1)_59
+  - first:
+      213: -1062725886876794672
+    second: Jumbotron image(1)_60
+  - first:
+      213: -2335204549893082025
+    second: Jumbotron image(1)_61
+  - first:
+      213: -1438386074710550073
+    second: Jumbotron image(1)_62
+  - first:
+      213: 2696062170989118947
+    second: Jumbotron image(1)_63
+  - first:
+      213: 3425879695981087882
+    second: Jumbotron image(1)_64
+  - first:
+      213: -2108527439896759034
+    second: Jumbotron image(1)_65
+  - first:
+      213: -8892219595379605400
+    second: Jumbotron image(1)_66
+  - first:
+      213: -7374337283741473923
+    second: Jumbotron image(1)_67
+  - first:
+      213: -236786168912706499
+    second: Jumbotron image(1)_68
+  - first:
+      213: 7343305161827962871
+    second: Jumbotron image(1)_69
+  - first:
+      213: 5729011938849294608
+    second: Jumbotron image(1)_70
+  - first:
+      213: 2193256070862842012
+    second: Jumbotron image(1)_71
+  - first:
+      213: -7026157038651389250
+    second: Jumbotron image(1)_72
+  - first:
+      213: -8644327797338306199
+    second: Jumbotron image(1)_73
+  - first:
+      213: -3020923525090161116
+    second: Jumbotron image(1)_74
+  - first:
+      213: -985326575912539854
+    second: Jumbotron image(1)_75
+  - first:
+      213: 2687992971965974344
+    second: Jumbotron image(1)_76
+  - first:
+      213: 7438507483843426948
+    second: Jumbotron image(1)_77
+  - first:
+      213: -422640515974463676
+    second: Jumbotron image(1)_78
+  - first:
+      213: 4402110495894642280
+    second: Jumbotron image(1)_79
+  - first:
+      213: 298303408898133212
+    second: Jumbotron image(1)_80
+  - first:
+      213: -331706850083788857
+    second: Jumbotron image(1)_81
+  - first:
+      213: 3411872287794736069
+    second: Jumbotron image(1)_82
+  - first:
+      213: -7465906533894332945
+    second: Jumbotron image(1)_83
+  - first:
+      213: -7816017704786442546
+    second: Jumbotron image(1)_84
+  - first:
+      213: -1947963553638786815
+    second: Jumbotron image(1)_85
+  - first:
+      213: -4250909102043877864
+    second: Jumbotron image(1)_86
+  - first:
+      213: 4066216314034258436
+    second: Jumbotron image(1)_87
+  - first:
+      213: -2315136856600303199
+    second: Jumbotron image(1)_88
+  - first:
+      213: -8698756182940770743
+    second: Jumbotron image(1)_89
+  - first:
+      213: 9222038055464020130
+    second: Jumbotron image(1)_90
+  - first:
+      213: 4157406229396532382
+    second: Jumbotron image(1)_91
+  - first:
+      213: -7482369442268047317
+    second: Jumbotron image(1)_92
+  - first:
+      213: -2768001528713799922
+    second: Jumbotron image(1)_93
+  - first:
+      213: -6420626493356772413
+    second: Jumbotron image(1)_94
+  - first:
+      213: 6399110749333722103
+    second: Jumbotron image(1)_95
+  - first:
+      213: -4758186436757829047
+    second: Jumbotron image(1)_96
+  - first:
+      213: -266845225441843555
+    second: Jumbotron image(1)_97
+  - first:
+      213: -126775878869999907
+    second: Jumbotron image(1)_98
+  - first:
+      213: 2357491041792029801
+    second: Jumbotron image(1)_99
+  - first:
+      213: 8542495260603678845
+    second: Jumbotron image(1)_100
+  - first:
+      213: -5866964342494949426
+    second: Jumbotron image(1)_101
+  - first:
+      213: -7993750636940228957
+    second: Jumbotron image(1)_102
+  - first:
+      213: 2889311099944354701
+    second: Jumbotron image(1)_103
+  - first:
+      213: 1852268292029853391
+    second: Jumbotron image(1)_104
+  - first:
+      213: -2512487490046908909
+    second: Jumbotron image(1)_105
+  - first:
+      213: 5011769496149923083
+    second: Jumbotron image(1)_106
+  - first:
+      213: 2366472053835408113
+    second: Jumbotron image(1)_107
+  - first:
+      213: 7715059514481124874
+    second: Jumbotron image(1)_108
+  - first:
+      213: 8843087289299703463
+    second: Jumbotron image(1)_109
+  - first:
+      213: -1136180877073445372
+    second: Jumbotron image(1)_110
+  - first:
+      213: -476959558136195423
+    second: Jumbotron image(1)_111
+  - first:
+      213: 4008716196641244812
+    second: Jumbotron image(1)_112
+  - first:
+      213: -5127256609681991525
+    second: Jumbotron image(1)_113
+  - first:
+      213: -1502914572698678089
+    second: Jumbotron image(1)_114
+  - first:
+      213: 6882825868433608744
+    second: Jumbotron image(1)_115
+  - first:
+      213: 6733537442601389807
+    second: Jumbotron image(1)_116
+  - first:
+      213: -8466210831953057319
+    second: Jumbotron image(1)_117
+  - first:
+      213: 9063375108935477641
+    second: Jumbotron image(1)_118
+  - first:
+      213: -730678077704508850
+    second: Jumbotron image(1)_119
+  - first:
+      213: -2168373945074553361
+    second: Jumbotron image(1)_120
+  - first:
+      213: -8196676613934543511
+    second: Jumbotron image(1)_121
+  - first:
+      213: -6554982581730349355
+    second: Jumbotron image(1)_122
+  - first:
+      213: -8665282778112472648
+    second: Jumbotron image(1)_123
+  - first:
+      213: 6741941442652638943
+    second: Jumbotron image(1)_124
+  - first:
+      213: 2883587936835241709
+    second: Jumbotron image(1)_125
+  - first:
+      213: -1131103989774360584
+    second: Jumbotron image(1)_126
+  - first:
+      213: -2309859383760930273
+    second: Jumbotron image(1)_127
+  - first:
+      213: -3859350356089052729
+    second: Jumbotron image(1)_128
+  - first:
+      213: 6507688310762912185
+    second: Jumbotron image(1)_129
+  - first:
+      213: 1455517132278739669
+    second: Jumbotron image(1)_130
+  - first:
+      213: -7717106507958832960
+    second: Jumbotron image(1)_131
+  - first:
+      213: -907191906624987506
+    second: Jumbotron image(1)_132
+  - first:
+      213: 1210381238067272053
+    second: Jumbotron image(1)_133
+  - first:
+      213: 297733682438950728
+    second: Jumbotron image(1)_134
+  - first:
+      213: 5490602014727668571
+    second: Jumbotron image(1)_135
+  - first:
+      213: -3372659184599657459
+    second: Jumbotron image(1)_136
+  - first:
+      213: 3944494906990797440
+    second: Jumbotron image(1)_137
+  - first:
+      213: 234284916022760823
+    second: Jumbotron image(1)_138
+  - first:
+      213: 7936754345782423920
+    second: Jumbotron image(1)_139
+  - first:
+      213: -4820108078390711569
+    second: Jumbotron image(1)_140
+  - first:
+      213: 2839078325909953619
+    second: Jumbotron image(1)_141
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: 2
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Jumbotron image(1)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2944
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4e2af0248d57f300800000000000000
+      internalID: 285799923431648842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_1
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 2944
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8f7e4a4a9935ff20800000000000000
+      internalID: 3455731623911128972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_2
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 2944
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f1ca1ce1771be450800000000000000
+      internalID: 6119010296772870640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_3
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 2944
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daa24c9308d9847c0800000000000000
+      internalID: -4086843487788193107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_4
+      rect:
+        serializedVersion: 2
+        x: 2192
+        y: 2944
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52ff50739de4276f0800000000000000
+      internalID: -688401098196254939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_5
+      rect:
+        serializedVersion: 2
+        x: 2740
+        y: 2944
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74318219d7635a150800000000000000
+      internalID: 5883168401163555655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2816
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80e9c9c50ceee5d30800000000000000
+      internalID: 4422234394079305224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_7
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 2816
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eb15d3b7047921a0800000000000000
+      internalID: -6833803383127335961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_8
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 2816
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27dc58024196755c0800000000000000
+      internalID: -4226794190098018958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_9
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 2816
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db2b565a8e0930e00800000000000000
+      internalID: 1009810070342841021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_10
+      rect:
+        serializedVersion: 2
+        x: 2192
+        y: 2816
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5824d8c049aef2d40800000000000000
+      internalID: 5561921986412495493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_11
+      rect:
+        serializedVersion: 2
+        x: 2740
+        y: 2816
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6bd35aaacbcf4720800000000000000
+      internalID: 2832706761940786028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2688
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9e84763d755c7bc0800000000000000
+      internalID: -3784055590625177957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_13
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 2688
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e66f4c03c42d73d00800000000000000
+      internalID: 952461070889711214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_14
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 2688
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3835c5a47b4382bb0800000000000000
+      internalID: -4960657027717377149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_15
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 2688
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce2962ea4226761d0800000000000000
+      internalID: -3357607087501307156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_16
+      rect:
+        serializedVersion: 2
+        x: 2192
+        y: 2688
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d3fae65c59bcc3f0800000000000000
+      internalID: -879124020997721133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_17
+      rect:
+        serializedVersion: 2
+        x: 2740
+        y: 2688
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2c5c6405445882a0800000000000000
+      internalID: -6735040587328889812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2560
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a39c40d319d3c1690800000000000000
+      internalID: -7630155974669186758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_19
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 2560
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df5672fc547772110800000000000000
+      internalID: 1236087764448404989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_20
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 2560
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16cd1f8ace72cca50800000000000000
+      internalID: 6542648256062676065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_21
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 2560
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f62d599b15848e0f0800000000000000
+      internalID: -1087539794166820241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_22
+      rect:
+        serializedVersion: 2
+        x: 2192
+        y: 2560
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41957b34fb1043a60800000000000000
+      internalID: 7652743587795786004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_23
+      rect:
+        serializedVersion: 2
+        x: 2740
+        y: 2560
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb7b9dc0177b6aa10800000000000000
+      internalID: 1920423987294877628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2432
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad448c8e436f91290800000000000000
+      internalID: -7919027762650135334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_25
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 2432
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f710ed66d35d60620800000000000000
+      internalID: 2740111882997072255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_26
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 2432
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b0a70cf12eef18b0800000000000000
+      internalID: -5179159216723091275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_27
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 2432
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccb317ceb909a9080800000000000000
+      internalID: -9179865891080160308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_28
+      rect:
+        serializedVersion: 2
+        x: 2192
+        y: 2432
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb411832a1440a7e0800000000000000
+      internalID: -1756328975618992962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_29
+      rect:
+        serializedVersion: 2
+        x: 2740
+        y: 2432
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c17e50158f6131480800000000000000
+      internalID: -8929768380378519780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2304
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 205d041bae4ba1df0800000000000000
+      internalID: -208655512630143742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_31
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 2304
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03dd8600a5ce191c0800000000000000
+      internalID: -4498554681468330704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_32
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 2304
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf19e42ad03575070800000000000000
+      internalID: 8095030173244494332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_33
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 2304
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c551d7e9320970110800000000000000
+      internalID: 1227107906139002204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_34
+      rect:
+        serializedVersion: 2
+        x: 2192
+        y: 2304
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d77f12e679c1580f0800000000000000
+      internalID: -1115453895990970499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_35
+      rect:
+        serializedVersion: 2
+        x: 2740
+        y: 2304
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c82eed0cf49d290c0800000000000000
+      internalID: -4570351735266155892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2176
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fff6d265672c0aa0800000000000000
+      internalID: -6193532071137837063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_37
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 2176
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e36b2aade060658d0800000000000000
+      internalID: -2858090252652595650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_38
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 2176
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4085980f5651cae40800000000000000
+      internalID: 5668929558524024836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_39
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 2176
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7306fb20864d1b180800000000000000
+      internalID: -9101259828751278025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_40
+      rect:
+        serializedVersion: 2
+        x: 2192
+        y: 2176
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ba6f8675a9137840800000000000000
+      internalID: 5220544591501945522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_41
+      rect:
+        serializedVersion: 2
+        x: 2740
+        y: 2176
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 985706498e5f8e550800000000000000
+      internalID: 6190468067091314057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2048
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4b0e6edf0f547fb0800000000000000
+      internalID: -4650987993405977781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_43
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 2048
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 437e4b45701e0c350800000000000000
+      internalID: 6035070922278627124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_44
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 2048
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 799128dddb81b0730800000000000000
+      internalID: 3966291100574030231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_45
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 2048
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7bbd28d12d64e750800000000000000
+      internalID: 6333306968117984127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_46
+      rect:
+        serializedVersion: 2
+        x: 2192
+        y: 2048
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8efd60c93a3070220800000000000000
+      internalID: 2451932523358773224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_47
+      rect:
+        serializedVersion: 2
+        x: 2740
+        y: 2048
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 995754ad6eeca4530800000000000000
+      internalID: 3840109123186554265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1920
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eaaf4e13f153c800800000000000000
+      internalID: 631438477389441769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_49
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 1920
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42dc939880e52ae30800000000000000
+      internalID: 4513273167333674276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_50
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 1920
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e74745df5ad6b2e0800000000000000
+      internalID: -2110259270241531932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_51
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 1920
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 007f79fc53f90ea90800000000000000
+      internalID: -7286649143620536576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_52
+      rect:
+        serializedVersion: 2
+        x: 2192
+        y: 1920
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cb1fe95e3ce97ec0800000000000000
+      internalID: -3568561477173437500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_53
+      rect:
+        serializedVersion: 2
+        x: 2740
+        y: 1920
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd11853fd5d524e20800000000000000
+      internalID: 3333329332303565275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1792
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7463fdc923570580800000000000000
+      internalID: -8861022302814116738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_55
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 1792
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fb4b6cdf6fa93130800000000000000
+      internalID: 3547059076505226232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_56
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 1792
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2851a652e9109a4d0800000000000000
+      internalID: -3122963087860558462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_57
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 1792
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abaf86b84e2072860800000000000000
+      internalID: 7504970484650932922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_58
+      rect:
+        serializedVersion: 2
+        x: 2192
+        y: 1792
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d0fa1c8a888ef530800000000000000
+      internalID: 3890697256732127442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_59
+      rect:
+        serializedVersion: 2
+        x: 2740
+        y: 1792
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0687235d8fc89a290800000000000000
+      internalID: -7878611072751339424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1664
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d0c81bbf607041f0800000000000000
+      internalID: -1062725886876794672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_61
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 1664
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7543fb595dfa79fd0800000000000000
+      internalID: -2335204549893082025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_62
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 1664
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c952076c73d90ce0800000000000000
+      internalID: -1438386074710550073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_63
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 1664
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e5cc2a92465a6520800000000000000
+      internalID: 2696062170989118947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_64
+      rect:
+        serializedVersion: 2
+        x: 2192
+        y: 1664
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8c0d22be6b2b8f20800000000000000
+      internalID: 3425879695981087882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_65
+      rect:
+        serializedVersion: 2
+        x: 2740
+        y: 1664
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6053ac107710db2e0800000000000000
+      internalID: -2108527439896759034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_66
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86081a8146d789480800000000000000
+      internalID: -8892219595379605400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_67
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 1536
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d73aba4bf4719a990800000000000000
+      internalID: -7374337283741473923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_68
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 1536
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d348b32eb34c6bcf0800000000000000
+      internalID: -236786168912706499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_69
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 1536
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ff4c006329a8e560800000000000000
+      internalID: 7343305161827962871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_70
+      rect:
+        serializedVersion: 2
+        x: 2192
+        y: 1536
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0198519310a818f40800000000000000
+      internalID: 5729011938849294608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_71
+      rect:
+        serializedVersion: 2
+        x: 2740
+        y: 1536
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c98af3da6c2007e10800000000000000
+      internalID: 2193256070862842012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1408
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebac21746631e7e90800000000000000
+      internalID: -7026157038651389250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_73
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 1408
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9698d9dfaad290880800000000000000
+      internalID: -8644327797338306199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_74
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 1408
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42e41693f068316d0800000000000000
+      internalID: -3020923525090161116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_75
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 1408
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2392bfe13ba6352f0800000000000000
+      internalID: -985326575912539854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_76
+      rect:
+        serializedVersion: 2
+        x: 2192
+        y: 1408
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84747cccd5bad4520800000000000000
+      internalID: 2687992971965974344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_77
+      rect:
+        serializedVersion: 2
+        x: 2740
+        y: 1408
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48a72994523ea3760800000000000000
+      internalID: 7438507483843426948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_78
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1280
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44f77a1a0ba722af0800000000000000
+      internalID: -422640515974463676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_79
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 1280
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86e91d13c20771d30800000000000000
+      internalID: 4402110495894642280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_80
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 1280
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdc49a2be59c32400800000000000000
+      internalID: 298303408898133212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_81
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 1280
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c72137906a856bf0800000000000000
+      internalID: -331706850083788857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_82
+      rect:
+        serializedVersion: 2
+        x: 2192
+        y: 1280
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cb2105d4c7695f20800000000000000
+      internalID: 3411872287794736069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_83
+      rect:
+        serializedVersion: 2
+        x: 2740
+        y: 1280
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fedd5f04095c36890800000000000000
+      internalID: -7465906533894332945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1152
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec64a0cfe4de78390800000000000000
+      internalID: -7816017704786442546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_85
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 1152
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 109d3fdf77177f4e0800000000000000
+      internalID: -1947963553638786815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_86
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 1152
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81e2338a1bcb105c0800000000000000
+      internalID: -4250909102043877864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_87
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 1152
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40209e1a13a1e6830800000000000000
+      internalID: 4066216314034258436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_88
+      rect:
+        serializedVersion: 2
+        x: 2192
+        y: 1152
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a9ace78b4bfedfd0800000000000000
+      internalID: -2315136856600303199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_89
+      rect:
+        serializedVersion: 2
+        x: 2740
+        y: 1152
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94e1510f65fc74780800000000000000
+      internalID: -8698756182940770743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a8211140c24bff70800000000000000
+      internalID: 9222038055464020130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_91
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 1024
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9c2d2250f212b930800000000000000
+      internalID: 4157406229396532382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_92
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 1024
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b281063b2a8492890800000000000000
+      internalID: -7482369442268047317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_93
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 1024
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e07964f66451699d0800000000000000
+      internalID: -2768001528713799922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_94
+      rect:
+        serializedVersion: 2
+        x: 2192
+        y: 1024
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c3f104e83a55e6a0800000000000000
+      internalID: -6420626493356772413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_95
+      rect:
+        serializedVersion: 2
+        x: 2740
+        y: 1024
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f39b6492553ec850800000000000000
+      internalID: 6399110749333722103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_96
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 896
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94ac7fd45a687fdb0800000000000000
+      internalID: -4758186436757829047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_97
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 896
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d96a7876ea9fb4cf0800000000000000
+      internalID: -266845225441843555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_98
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 896
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dde9dd5820a9d3ef0800000000000000
+      internalID: -126775878869999907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_99
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 896
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 964fd2bac9d77b020800000000000000
+      internalID: 2357491041792029801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_100
+      rect:
+        serializedVersion: 2
+        x: 2192
+        y: 896
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d708dbfed2a0d8670800000000000000
+      internalID: 8542495260603678845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_101
+      rect:
+        serializedVersion: 2
+        x: 2740
+        y: 896
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecf84b7d30b549ea0800000000000000
+      internalID: -5866964342494949426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_102
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a6002ef52e701190800000000000000
+      internalID: -7993750636940228957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_103
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 768
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d83c6cd1325e81820800000000000000
+      internalID: 2889311099944354701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_104
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 768
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcea827a23494b910800000000000000
+      internalID: 1852268292029853391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_105
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 768
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 316242580f9d12dd0800000000000000
+      internalID: -2512487490046908909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_106
+      rect:
+        serializedVersion: 2
+        x: 2192
+        y: 768
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b059722adc16d8540800000000000000
+      internalID: 5011769496149923083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_107
+      rect:
+        serializedVersion: 2
+        x: 2740
+        y: 768
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f2afbb7bc567d020800000000000000
+      internalID: 2366472053835408113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_108
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0625a590c5611b60800000000000000
+      internalID: 7715059514481124874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_109
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 640
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a61b747905f8ba70800000000000000
+      internalID: 8843087289299703463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_110
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 640
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40e027513897b30f0800000000000000
+      internalID: -1136180877073445372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_111
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 640
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a690151fcf7169f0800000000000000
+      internalID: -476959558136195423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_112
+      rect:
+        serializedVersion: 2
+        x: 2192
+        y: 640
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c86082a4422d1a730800000000000000
+      internalID: 4008716196641244812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_113
+      rect:
+        serializedVersion: 2
+        x: 2740
+        y: 640
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9891a3674358d8b0800000000000000
+      internalID: -5127256609681991525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_114
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bc898ea823942be0800000000000000
+      internalID: -1502914572698678089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_115
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 512
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 820dada19a5b48f50800000000000000
+      internalID: 6882825868433608744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_116
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 512
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fee4c04d0a4527d50800000000000000
+      internalID: 6733537442601389807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_117
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 512
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d9afdfaa1af18a80800000000000000
+      internalID: -8466210831953057319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_118
+      rect:
+        serializedVersion: 2
+        x: 2192
+        y: 512
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 989673a44a397cd70800000000000000
+      internalID: 9063375108935477641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_119
+      rect:
+        serializedVersion: 2
+        x: 2740
+        y: 512
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4ae14dd82c1cd5f0800000000000000
+      internalID: -730678077704508850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_120
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fed6e9fa26368e1e0800000000000000
+      internalID: -2168373945074553361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_121
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 384
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96d0ea72c0e8f3e80800000000000000
+      internalID: -8196676613934543511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_122
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 384
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dee61b52160805a0800000000000000
+      internalID: -6554982581730349355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_123
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 384
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b9cb44593bbeb780800000000000000
+      internalID: -8665282778112472648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_124
+      rect:
+        serializedVersion: 2
+        x: 2192
+        y: 384
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fde8bc19500309d50800000000000000
+      internalID: 6741941442652638943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_125
+      rect:
+        serializedVersion: 2
+        x: 2740
+        y: 384
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de68aad53ff840820800000000000000
+      internalID: 2883587936835241709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_126
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ffd8750ae28d40f0800000000000000
+      internalID: -1131103989774360584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_127
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 256
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1ab3dde02bb1ffd0800000000000000
+      internalID: -2309859383760930273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_128
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 256
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c1e8818c45d07ac0800000000000000
+      internalID: -3859350356089052729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_129
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 256
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b93cf71a04ff4a50800000000000000
+      internalID: 6507688310762912185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_130
+      rect:
+        serializedVersion: 2
+        x: 2192
+        y: 256
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d238f1ce19033410800000000000000
+      internalID: 1455517132278739669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_131
+      rect:
+        serializedVersion: 2
+        x: 2740
+        y: 256
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c0324b948457e490800000000000000
+      internalID: -7717106507958832960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_132
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8e128674c10963f0800000000000000
+      internalID: -907191906624987506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_133
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 128
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5791cc9b2532cc010800000000000000
+      internalID: 1210381238067272053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_134
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 128
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84f417be433c12400800000000000000
+      internalID: 297733682438950728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_135
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 128
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5303e22179823c40800000000000000
+      internalID: 5490602014727668571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_136
+      rect:
+        serializedVersion: 2
+        x: 2192
+        y: 128
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d049a793758e131d0800000000000000
+      internalID: -3372659184599657459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_137
+      rect:
+        serializedVersion: 2
+        x: 2740
+        y: 128
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08226851839adb630800000000000000
+      internalID: 3944494906990797440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_138
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 775d4cbc3e8504300800000000000000
+      internalID: 234284916022760823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_139
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 0
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07136e9d604052e60800000000000000
+      internalID: 7936754345782423920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_140
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 0
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feae780ad398b1db0800000000000000
+      internalID: -4820108078390711569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumbotron image(1)_141
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 0
+        width: 548
+        height: 128
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35c9f5102be666720800000000000000
+      internalID: 2839078325909953619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 24613ba90be2f7a48aba4f5c3d2f42d8
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
