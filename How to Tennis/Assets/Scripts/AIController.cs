@@ -198,7 +198,7 @@ public class AIController : MonoBehaviour
         int randomZ = Random.Range(-8, -32);
 
         //Make sure the ball isn't moving
-        ball.resetVelocity();
+        //ball.resetVelocity();
         //Give the ball our position and the target to allow it to move.
         ball.Move(transform.position, new Vector3(randomX, 0.1f, randomZ));
         //Tell the match manger the AI has served.

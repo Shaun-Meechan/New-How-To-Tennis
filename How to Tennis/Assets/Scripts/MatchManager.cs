@@ -66,7 +66,6 @@ public class MatchManager : MonoBehaviour
 	//Variable to store the version text, used in the pause menu
 	public TextMeshProUGUI versionText;
 
-
 	private void Start()
 	{
 		//Setup the version text
@@ -93,12 +92,20 @@ public class MatchManager : MonoBehaviour
     {
         if (Application.platform == RuntimePlatform.Android || Application.platform == RuntimePlatform.WindowsEditor)
         {
+			//Player pressed the pause button. Find out if we should pause or un-pause
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-				//Player pressed the back button. Show the pause menu
-				pauseMenu.SetActive(true);
-				setPaused(true);
-            }
+				if (paused == true)
+				{
+					pauseMenu.SetActive(false);
+					setPaused(false);
+				}
+                else
+                {
+					pauseMenu.SetActive(true);
+					setPaused(true);
+				}
+			}
         }
     }
 
@@ -123,11 +130,11 @@ public class MatchManager : MonoBehaviour
 		{
 			case matchState.PlayerServe:
 				//Player is meant to serve. Move the ball to in front of the Player
-				ball.setTransform(new Vector3(human.transform.position.x, human.transform.position.y, human.transform.position.z + 2));
+				ball.setTransform(new Vector3(human.transform.position.x, human.transform.position.y, human.transform.position.z + 2.5f));
 				break;
 			case matchState.AIServe:
 				//AI is meant to serve. Move the ball to in front of the AI
-				ball.setTransform(new Vector3(AI.transform.position.x, AI.transform.position.y, AI.transform.position.z + 2));
+				ball.setTransform(new Vector3(AI.transform.position.x, AI.transform.position.y, AI.transform.position.z + 2.5f));
 				AI.serveBall();
 			break;
 			default:
@@ -315,8 +322,8 @@ public class MatchManager : MonoBehaviour
 	/// </summary>
 	private void updateScoreText()
 	{
-		playerScoreText.text = "Player Score: " + playerScore;
-		AIScoreText.text = "AI Score: " + AIScore;
+		playerScoreText.text = "Player: " + playerScore;
+		AIScoreText.text = "AI: " + AIScore;
 		showScoreCanvas();
 	}
 

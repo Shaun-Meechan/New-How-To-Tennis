@@ -30,7 +30,7 @@ public class NewBallController : MonoBehaviour
     //Bool to represent if it is the first time the ball has been served in a round
     private bool firstServe = false;
     //Float to represent the increased lerp animation speed
-    private float countIncreaseSpeed = 1.5f;
+    private float countIncreaseSpeed = 1.0f;
     //Vector 3s for the first serve bounce lerp
     Vector3 firstEndPoint = new Vector3(0, 0, 0);
     Vector3 FirstBounceToEnd = new Vector3(0, 0, 0);
@@ -146,8 +146,6 @@ public class NewBallController : MonoBehaviour
     /// <summary>
     /// Function to setup the data need to lerp the ball from a start point to an end point
     /// </summary>
-    /// <param name="startPositon"></param>
-    /// <param name="endPosition"></param>
     public void Move(Vector3 startPositon, Vector3 endPosition)
     {
         //Turn off the collider so we don't accidently collide with our own side.
