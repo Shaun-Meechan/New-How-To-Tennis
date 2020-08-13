@@ -1,4 +1,4 @@
-﻿//Script from https://www.youtube.com/watch?v=YMj2qPq9CP8
+﻿//Coroutine from https://www.youtube.com/watch?v=YMj2qPq9CP8
 
 using System.Collections;
 using UnityEngine;
@@ -24,11 +24,22 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(LoadAsynchronously(sceneIndex));
     }
 
+    /// <summary>
+    /// Function to load a random level. Used in the main menu to load a level.
+    /// </summary>
     public void LoadRandomLevel()
     {
         int index = Random.Range(1, 3);
-        Debug.Log(index);
         StartCoroutine(LoadAsynchronously(index));
+    }
+
+    /// <summary>
+    /// Function to reload the current level. Used by the restart level buttons.
+    /// </summary>
+
+    public void LoadCurrentLevel()
+    {
+        StartCoroutine(LoadAsynchronously(SceneManager.GetActiveScene().buildIndex)); 
     }
 
     /// <summary>

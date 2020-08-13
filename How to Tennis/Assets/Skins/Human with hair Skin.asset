@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skinName: Human with hair
   cost: 150
-  description: Human with hair desc
+  description: With luscious hair like this, how could the opponent not be distracted.
   ID: 4
   skin: {fileID: 2100000, guid: fed59be252af1c349939b9d6cc40dde1, type: 2}

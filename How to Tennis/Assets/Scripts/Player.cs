@@ -16,10 +16,17 @@ public class Player : MonoBehaviour
     public bool firstTime = true;
     //Variable to store if the user want audio muted
     public bool playAudio = true;
-
     private void Start()
     {
         DontDestroyOnLoad(this.gameObject);
+        if (GameObject.FindGameObjectsWithTag("PlayerData").Length >= 2)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            return;
+        }
     }
 
     /// <summary>

@@ -2182,6 +2182,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: TennisRacket
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 96fb1065eee96b442988c44984a10d64,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 326680701022325867, guid: 96fb1065eee96b442988c44984a10d64,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759805236004735002, guid: 96fb1065eee96b442988c44984a10d64,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293458183792491140, guid: 96fb1065eee96b442988c44984a10d64,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5767974960422501358, guid: 96fb1065eee96b442988c44984a10d64,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -3723,7 +3743,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1333142022
 Transform:
@@ -3903,7 +3923,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &1360773190
 MonoBehaviour:
@@ -4761,7 +4781,7 @@ GameObject:
   - component: {fileID: 1556651896}
   m_Layer: 0
   m_Name: Player Data
-  m_TagString: Untagged
+  m_TagString: PlayerData
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5634,7 +5654,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &1673102348
 RectTransform:
@@ -6393,12 +6413,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1911652911}
-        m_MethodName: LoadLevel
-        m_Mode: 3
+        m_MethodName: LoadRandomLevel
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -6590,6 +6610,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Skin Loader
+      objectReference: {fileID: 0}
+    - target: {fileID: 5055359998472046595, guid: 5e887306219d25a458a53f464ec5b146,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e887306219d25a458a53f464ec5b146, type: 3}

@@ -107,6 +107,11 @@ public class MatchManager : MonoBehaviour
 				}
 			}
         }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+			ChangeState(matchState.Finished);
+        }
     }
 
     /// <summary>

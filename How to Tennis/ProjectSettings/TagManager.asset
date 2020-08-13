@@ -9,6 +9,7 @@ TagManager:
   - ball
   - ad button
   - Spectator
+  - PlayerData
   layers:
   - Default
   - TransparentFX
