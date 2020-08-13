@@ -181,6 +181,9 @@ public class AIController : MonoBehaviour
         //Make sure to tell the ball that this is the first serve.
         ball.setFirstServe(true);
 
+        //Set the ball's speed
+        ball.setCountIncreaseSpeed(1.0f);
+
         //Find a random point to fire the ball towards. -6 and +6 are used to make sure the target is not outside the court.
         float randomX = Random.Range(-6 + transform.position.x, transform.position.x + 6);
 
@@ -197,8 +200,6 @@ public class AIController : MonoBehaviour
 
         int randomZ = Random.Range(-8, -32);
 
-        //Make sure the ball isn't moving
-        //ball.resetVelocity();
         //Give the ball our position and the target to allow it to move.
         ball.Move(transform.position, new Vector3(randomX, 0.1f, randomZ));
         //Tell the match manger the AI has served.
@@ -219,6 +220,9 @@ public class AIController : MonoBehaviour
         {
             return;
         }
+
+        //Set the ball's speed
+        ball.setCountIncreaseSpeed(1.0f);
 
         //Generate a random target and make sure it is inside the court.
         float randomX = Random.Range(-6 + transform.position.x, transform.position.x + 6);

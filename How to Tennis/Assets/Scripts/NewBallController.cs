@@ -71,6 +71,7 @@ public class NewBallController : MonoBehaviour
                 if (doSecondPartOfBounce == true)
                 {
                     //Lerp from the bounce point to the end point
+                    setCountIncreaseSpeed(1.1f);
                     m1 = Vector3.Lerp(firstEndPoint, FirstBounceToEnd, count);
                     m2 = Vector3.Lerp(FirstBounceToEnd, endPoint, count);
                     transform.position = Vector3.Lerp(m1, m2, count);
@@ -240,7 +241,7 @@ public class NewBallController : MonoBehaviour
     }
 
     /// <summary>
-    /// Set the speed at which count increase in the update function. A value higher than 1 is undesirable.
+    /// Set the speed at which count increase in the update function.
     /// </summary>
     /// <param name="value"></param>
     public void setCountIncreaseSpeed(float value)

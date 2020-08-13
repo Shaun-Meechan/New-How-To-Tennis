@@ -322,8 +322,8 @@ public class MatchManager : MonoBehaviour
 	/// </summary>
 	private void updateScoreText()
 	{
-		playerScoreText.text = "Player: " + playerScore;
-		AIScoreText.text = "AI: " + AIScore;
+		playerScoreText.text = "You: " + playerScore;
+		AIScoreText.text = "Opp: " + AIScore;
 		showScoreCanvas();
 	}
 

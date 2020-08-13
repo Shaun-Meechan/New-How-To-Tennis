@@ -24,6 +24,13 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(LoadAsynchronously(sceneIndex));
     }
 
+    public void LoadRandomLevel()
+    {
+        int index = Random.Range(1, 3);
+        Debug.Log(index);
+        StartCoroutine(LoadAsynchronously(index));
+    }
+
     /// <summary>
     /// Coroutine to load the new scene asynchronously
     /// </summary>

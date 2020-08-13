@@ -86,6 +86,9 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Function to reset the player's velocity to a vector 3 zero
+    /// </summary>
     public void resetVelocity()
     {
         rb.velocity = new Vector3(0, 0, 0);
