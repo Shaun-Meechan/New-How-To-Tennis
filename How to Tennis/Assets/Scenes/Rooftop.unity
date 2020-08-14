@@ -12915,12 +12915,7 @@ PrefabInstance:
     - target: {fileID: 4480062225874361702, guid: 8aece9ec3063479498761d2fde319f41,
         type: 3}
       propertyPath: m_Name
-      value: Court Boundrys
-      objectReference: {fileID: 0}
-    - target: {fileID: 4480062225874361702, guid: 8aece9ec3063479498761d2fde319f41,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: Court Boundarys
       objectReference: {fileID: 0}
     - target: {fileID: 4480062225874361703, guid: 8aece9ec3063479498761d2fde319f41,
         type: 3}

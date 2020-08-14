@@ -56,6 +56,10 @@ public class PlayerMovement : MonoBehaviour
         verticalMove = joystick.Vertical * speed;
         transform.position = new Vector3(transform.position.x + horizontalMove, transform.position.y, transform.position.z + verticalMove);
 
+        if (horizontalMove > 0 || verticalMove > 0)
+        {
+            resetVelocity();
+        }
         //Check to see if we are below our max Y position and we are able to go up.
         if (transform.position.y <= 2.0f && animDown == false)
         {

@@ -59,7 +59,10 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
             //If the user does not watch an ad the first time but try again after the next match
             //Unity will not be able to find this button so can't turn it off or stop more ad's being played
             //No idea why this happens!!
-            adButton = adButton = GameObject.FindGameObjectWithTag("ad button").GetComponent<Button>();
+            if (adButton == null)
+            {
+                adButton = adButton = GameObject.FindGameObjectWithTag("ad button").GetComponent<Button>();
+            }
             
             player.credits += 15;
             SaveSystem.SavePlayer(player);
