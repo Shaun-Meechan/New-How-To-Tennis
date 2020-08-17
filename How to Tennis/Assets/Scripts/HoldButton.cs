@@ -48,6 +48,11 @@ public class HoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         {
             return;
         }
+        else if (Input.GetMouseButtonUp(1) == true || Input.GetMouseButtonUp(2) == true)
+        {
+            Reset();
+            return;
+        }
         else
         {
             if (pointerDownTimer < 0.45f)
@@ -95,6 +100,7 @@ public class HoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         pointerDown = false;
         pointerDownTimer = 0;
         fillImage.fillAmount = 0;
+        setAcceptInput(true);
     }
 
     /// <summary>

@@ -62,7 +62,7 @@ public class MatchManager : MonoBehaviour
 	//Variable to store the pause menu
 	public GameObject pauseMenu;
 	//Variable to store if the game is paused
-	public bool paused = false;
+	private bool paused = false;
 	//Variable to store the version text, used in the pause menu
 	public TextMeshProUGUI versionText;
 
@@ -143,7 +143,6 @@ public class MatchManager : MonoBehaviour
 				AI.serveBall();
 			break;
 			default:
-				Debug.LogError("ERROR: Unable to reset ball position");
 				break;
 		}
 	}
@@ -306,12 +305,12 @@ public class MatchManager : MonoBehaviour
 			ChangeState(matchState.Finished);
 			endMatchText.text = "AI won!";
 		}
-        if (AIScore < 6)
+        else if (AIScore < 6)
         {
 			updateScoreText();
+			ChangeState(matchState.PlayerServe);
+			resetMatch();
         }
-		ChangeState(matchState.PlayerServe);
-		resetMatch();
 	}
 
 	/// <summary>
@@ -382,11 +381,11 @@ public class MatchManager : MonoBehaviour
         if (failedServes > 2)
         {
 			//Player failed to serve twice. Give AI point and let it serve
-			failedServes = 0;
-			incrementAIScore(1);
-			ChangeState(matchState.AIServe);
-			resetMatch();
-        }
+				failedServes = 0;
+				incrementAIScore(1);
+				ChangeState(matchState.AIServe);
+				resetMatch();
+		}
         else
         {
 			//First or second failed serve. Give the player another chance

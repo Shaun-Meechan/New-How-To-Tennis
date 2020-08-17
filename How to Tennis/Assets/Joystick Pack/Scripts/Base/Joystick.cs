@@ -9,6 +9,11 @@ public class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
     public float Vertical { get { return (snapY) ? SnapFloat(input.y, AxisOptions.Vertical) : input.y; } }
     public Vector2 Direction { get { return new Vector2(Horizontal, Vertical); } }
 
+    public PlayerMovement setPlayer
+    {
+        set { player = value; }
+    }
+
     public float HandleRange
     {
         get { return handleRange; }
@@ -30,7 +35,7 @@ public class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
     [SerializeField] private AxisOptions axisOptions = AxisOptions.Both;
     [SerializeField] private bool snapX = false;
     [SerializeField] private bool snapY = false;
-
+    private PlayerMovement player;
     [SerializeField] protected RectTransform background = null;
     [SerializeField] private RectTransform handle = null;
     private RectTransform baseRect = null;
@@ -133,11 +138,13 @@ public class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
     {
         input = Vector2.zero;
         handle.anchoredPosition = Vector2.zero;
+        player.resetVelocity();
     }
 
     public virtual void resetHorizontalAndVerticalValue()
     {
         input = new Vector2(0, 0);
+        handle.anchoredPosition = new Vector2(0, 0);
     }
 
     protected Vector2 ScreenPointToAnchoredPosition(Vector2 screenPosition)
