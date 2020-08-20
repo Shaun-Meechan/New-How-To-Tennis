@@ -29,6 +29,9 @@ public class PlayerMovement : MonoBehaviour
     private readonly float animationSpeed = 0.05f;
     //Variable to store the rigidbody
     private Rigidbody rb;
+    //Variables to store max X and max Y for fake animation
+    public float maxY = 1.0f;
+    public float minY = 0.0f;
 
     private void Start()
     {
@@ -63,13 +66,13 @@ public class PlayerMovement : MonoBehaviour
             animUp = true;
         }
         //Check to see if we are above our max Y position. If so flip the variables and go down.
-        else if (transform.position.y >= 2.0f)
+        else if (transform.position.y >= maxY)
         {
             animUp = false;
             animDown = true;
         }
         //Check to see if we are below our min Y position. If so flip the variables and go up.
-        else if (transform.position.y <= 1.0)
+        else if (transform.position.y <= minY)
         {
             animDown = false;
             animUp = true;

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -107981364, guid: 2c3078f85c1a94a82b179c36ee13484f, type: 3}
+  m_Name: UDP Settings
+  m_EditorClassIdentifier: 
+  UnityProjectID: 1f65f45a-fc13-4efa-ab4e-d5817d5e78f1
+  UnityClientID: 6aNg2L1EPdLqATUxRC8eug
+  UnityClientKey: qtbEuQPhmB19XvufpRITOrf1b_hYMrG6ol8LJeVIlOE
+  UnityClientRSAPublicKey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjX45TiedXep18y1hO2psS0Uoy5sUQ0t7H+ZURWoJpBeEaQOU9hFM5PL/HEdwTl4jqytFv1p8/1U7bmju3+dmGVnhOnpbvmMVK8gVKXlHsNApBr0Bdk2IMwholpXMLrjUc9X2J7Sm+jLwKjAI6/wlN18BV6Q3dqFzOJOREUSRTBKTGfD92BAZPO9/WhGoJTqWJeVkg/xcmvbblDuf1OV2fZmDs9qnVDfB5x607jiCLvulropX+XvatSaMg7DxlYj3PYoKGWGbZ5h9ZAIYV+sPs3ixDQjmrKxeG9utN241ExA9StGCNqNWT4OYO/Yp0si/+0171CsRO1GlpmTjlODfnwIDAQAB
+  AppName: How To Tennis
+  AppSlug: 9aec813b-0f92-452f-bddb-86aa62e07943
+  AppItemId: 5f3ba28e9e7608001f8427cd
+  Permission: 

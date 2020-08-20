@@ -29,7 +29,7 @@ public class LevelLoader : MonoBehaviour
     /// </summary>
     public void LoadRandomLevel()
     {
-        int index = Random.Range(1, 3);
+        int index = Random.Range(1, 4);
         StartCoroutine(LoadAsynchronously(index));
     }
 

@@ -23,6 +23,7 @@ public class MainMenu : MonoBehaviour
     public Sprite audioPlayingSprite;
     public Sprite audioMutedSprite;
     public AudioToggle audioToggle;
+
     void Start()
     {
         Application.targetFrameRate = 60;
