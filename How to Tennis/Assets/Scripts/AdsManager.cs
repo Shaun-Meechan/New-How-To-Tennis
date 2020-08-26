@@ -20,7 +20,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
     //Get a reference to our credits text so we can update it.
     public TextMeshProUGUI creditsText;
     //Get a reference to our button so we know when to show an ad.
-    public Button adButton;
+    private Button adButton;
 
     //Get a reference to our error message object
     public GameObject errorMessageObject;
