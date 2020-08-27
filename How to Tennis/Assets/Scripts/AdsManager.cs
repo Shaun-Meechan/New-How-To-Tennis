@@ -11,6 +11,8 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
     private string gameID = "3509088";
 #elif UNITY_ANDROID
     private string gameID = "3509089";
+#elif UNITY_STANDALONE
+    private string gameID = "0000000";
 #endif
 
     //myPlacementID should be equal to the type of ad we want to show.
