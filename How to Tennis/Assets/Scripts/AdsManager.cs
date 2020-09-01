@@ -36,7 +36,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
         adButton.interactable = Advertisement.IsReady(myplacementID);
         //Create a listener for the ads service and initialise the service.
         Advertisement.AddListener(this);
-        Advertisement.Initialize(gameID, true);
+        Advertisement.Initialize(gameID, false);
     }
 
     public void showAd()

@@ -17521,6 +17521,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6440409097389403675, guid: 0de03f2caf3388e4baadec4701b7e083,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6440409097481742900, guid: 0de03f2caf3388e4baadec4701b7e083,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -17561,6 +17566,11 @@ PrefabInstance:
       propertyPath: percentageText
       value: 
       objectReference: {fileID: 1851673701}
+    - target: {fileID: 6440409097916885287, guid: 0de03f2caf3388e4baadec4701b7e083,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6440409097943741996, guid: 0de03f2caf3388e4baadec4701b7e083,
         type: 3}
       propertyPath: spacingManager

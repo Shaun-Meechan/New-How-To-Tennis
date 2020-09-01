@@ -2326,7 +2326,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 400, y: 100}
+  m_SizeDelta: {x: 400, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6440409097916885286
 CanvasRenderer:
@@ -2565,7 +2565,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   creditsText: {fileID: 6440409097453382404}
-  adButton: {fileID: 6440409099186591685}
   errorMessageObject: {fileID: 6440409097380312588}
 --- !u!1 &6440409098005196922
 GameObject:
