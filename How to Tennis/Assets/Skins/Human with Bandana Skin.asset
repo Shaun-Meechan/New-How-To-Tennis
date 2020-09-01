@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skinName: Human with Bandana
   cost: 200
-  description: Let your presence be known with this colourful bandana.
+  description: With a cool mohawk like this, who wouldn't be scared.
   ID: 5
   skin: {fileID: 2100000, guid: 9f0c4e2d14d76704393abf8782c230aa, type: 2}
