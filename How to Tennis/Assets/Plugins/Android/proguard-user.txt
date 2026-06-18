@@ -1,0 +1,4 @@
+-dontwarn android.app.GameManager
+-dontwarn android.app.GameState
+-dontwarn android.window.OnBackInvokedCallback
+-dontwarn android.window.OnBackInvokedDispatcher

@@ -159,7 +159,7 @@ public class AIController : MonoBehaviour
     public void resetVelocity()
     {
         //Could use Vector3.zero but this is more optimal and recommended by Unity.
-        rb.velocity = new Vector3(0,0,0);
+        rb.linearVelocity = new Vector3(0,0,0);
     }
 
     /// <summary>

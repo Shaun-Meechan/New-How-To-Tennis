@@ -3,7 +3,7 @@ using UnityEngine.Advertisements;
 using TMPro;
 using UnityEngine.UI;
 
-public class AdsManager : MonoBehaviour, IUnityAdsListener
+public class AdsManager : MonoBehaviour, IUnityAdsInitializationListener
 {
     //Create a variable storing our gameID depending on the platform.
     //These IDs are from the Unity dashboard.
@@ -32,11 +32,10 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
     {
         adButton = GameObject.FindGameObjectWithTag("ad button").GetComponent<Button>();
         player = (Player)FindObjectOfType(typeof(Player));
-        //Make sure the button can't be interacted with until there is an ad to show.
-        adButton.interactable = Advertisement.IsReady(myplacementID);
-        //Create a listener for the ads service and initialise the service.
-        Advertisement.AddListener(this);
-        Advertisement.Initialize(gameID, false);
+        if (!Advertisement.isInitialized && Advertisement.isSupported)
+        {
+            Advertisement.Initialize(gameID, false, this);
+        }
     }
 
     public void showAd()
@@ -94,6 +93,16 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
         {
             adButton.interactable = true;
         }
+    }
+    
+    public void OnInitializationComplete()
+    {
+        Debug.Log("Unity Ads initialization complete.");
+    }
+
+    public void OnInitializationFailed(UnityAdsInitializationError error, string message)
+    {
+        Debug.Log($"Unity Ads Initialization Failed: {error.ToString()} - {message}");
     }
 
 }

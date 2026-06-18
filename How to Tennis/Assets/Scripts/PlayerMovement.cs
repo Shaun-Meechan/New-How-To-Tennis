@@ -94,7 +94,7 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     public void resetVelocity()
     {
-        rb.velocity = new Vector3(0, 0, 0);
+        rb.linearVelocity = new Vector3(0, 0, 0);
     }
 
     /// <summary>
